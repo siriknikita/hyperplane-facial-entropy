@@ -2,6 +2,13 @@
 
 All notable changes to this project. Format follows Keep a Changelog; newest first.
 
+## [v0.2.0] - 2026-10-08
+### Added
+- Smoke profile run on synthetic pseudo-faces with explicit landmarks (`artifacts/facial-entropy/smoke`).
+### Findings
+- 0 integrity failures; 3 solver audit findings (divergence sign, non-stationary z*, non-adjoint operators). Reported, baseline preserved, corrected variant added as a labelled ablation.
+
+
 ## [v0.1.0] - 2026-10-08
 ### Added
 - Protocol 1.0 (`experiments/facial_entropy/protocol.md`) and profile configs (smoke / quick / main).
