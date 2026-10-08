@@ -1,0 +1,719 @@
+{
+  "deepfake_task": "not applicable: FEI has no manipulated images / original-manipulated links",
+  "images_per_subject": {
+    "fei004": 6,
+    "fei009": 6,
+    "fei015": 6,
+    "fei017": 6,
+    "fei020": 6,
+    "fei033": 6,
+    "fei040": 6,
+    "fei041": 6,
+    "fei044": 6,
+    "fei048": 5,
+    "fei049": 5,
+    "fei053": 6,
+    "fei060": 6,
+    "fei063": 5,
+    "fei065": 5,
+    "fei066": 6,
+    "fei067": 6,
+    "fei069": 6,
+    "fei070": 6,
+    "fei075": 6,
+    "fei076": 6,
+    "fei084": 6,
+    "fei091": 6,
+    "fei097": 6,
+    "fei098": 6,
+    "fei102": 6,
+    "fei108": 5,
+    "fei110": 5,
+    "fei120": 6,
+    "fei122": 6,
+    "fei127": 6,
+    "fei128": 6,
+    "fei130": 6,
+    "fei144": 6,
+    "fei148": 6,
+    "fei150": 6,
+    "fei159": 6,
+    "fei168": 6,
+    "fei170": 6,
+    "fei175": 6,
+    "fei176": 6,
+    "fei179": 6,
+    "fei183": 6,
+    "fei184": 6,
+    "fei185": 6,
+    "fei189": 6,
+    "fei192": 6,
+    "fei193": 6,
+    "fei195": 6,
+    "fei196": 6
+  },
+  "n_subjects_with_ge4_images": 50,
+  "note": "pair counts are not independent sample counts; subjects are the independent unit",
+  "pairs": {
+    "calibration": {
+      "n_pairs": 280,
+      "n_positive": 140,
+      "n_subjects": 10
+    },
+    "test": {
+      "n_pairs": 270,
+      "n_positive": 135,
+      "n_subjects": 10
+    },
+    "train": {
+      "n_pairs": 890,
+      "n_positive": 445,
+      "n_subjects": 30
+    }
+  },
+  "ran": true,
+  "results": {
+    "entropy_vs_utility_ranking": {
+      "binary_cond_otsu": {
+        "auroc_by_region": {
+          "cheek_left": 0.5252126200274349,
+          "cheek_right": 0.5747050754458162,
+          "eye_inner_left": 0.6920713305898492,
+          "eye_inner_right": 0.6600274348422496,
+          "forehead_left": 0.7232921810699589,
+          "forehead_right": 0.7326200274348422,
+          "nose_bridge": 0.6160768175582991,
+          "nose_tip": 0.6079012345679013
+        },
+        "entropy_by_region": {
+          "cheek_left": 0.00543696066630021,
+          "cheek_right": 0.06682096537189647,
+          "eye_inner_left": 0.14723249592541038,
+          "eye_inner_right": 0.10682546588204347,
+          "forehead_left": 0.049822957012225146,
+          "forehead_right": 0.032162428753834224,
+          "nose_bridge": 0.04542088960051542,
+          "nose_tip": 0.10913858724446397
+        },
+        "n_regions": 8,
+        "note": "eight dependent anatomical regions give very few ranking points; descriptive only",
+        "spearman_entropy_vs_auroc_over_regions": 0.09523809523809526
+      },
+      "gaussian_curvature": {
+        "auroc_by_region": {
+          "cheek_left": 0.5252126200274349,
+          "cheek_right": 0.5747050754458162,
+          "eye_inner_left": 0.6920713305898492,
+          "eye_inner_right": 0.6600274348422496,
+          "forehead_left": 0.7232921810699589,
+          "forehead_right": 0.7326200274348422,
+          "nose_bridge": 0.6160768175582991,
+          "nose_tip": 0.6079012345679013
+        },
+        "entropy_by_region": {
+          "cheek_left": 3.583386766205604,
+          "cheek_right": 3.577754085460615,
+          "eye_inner_left": 2.241282533090955,
+          "eye_inner_right": 2.3651129039356458,
+          "forehead_left": 3.176625197465361,
+          "forehead_right": 2.956685426132352,
+          "nose_bridge": 2.58736509963258,
+          "nose_tip": 2.521175825259164
+        },
+        "n_regions": 8,
+        "note": "eight dependent anatomical regions give very few ranking points; descriptive only",
+        "spearman_entropy_vs_auroc_over_regions": -0.4047619047619048
+      }
+    },
+    "occlusion": {
+      "cheek_left|face_median": {
+        "auroc": 0.9163237311385459,
+        "auroc_drop_vs_intact": 0.0007133058984910567
+      },
+      "cheek_left|mean_gray_0.5": {
+        "auroc": 0.9156104252400548,
+        "auroc_drop_vs_intact": 0.0014266117969822245
+      },
+      "cheek_left|surface_rgb_fill_0.5": {
+        "auroc": 0.9540192043895748,
+        "auroc_drop_vs_intact": -0.0004938271604939537
+      },
+      "cheek_right|face_median": {
+        "auroc": 0.9175308641975308,
+        "auroc_drop_vs_intact": -0.0004938271604938427
+      },
+      "cheek_right|mean_gray_0.5": {
+        "auroc": 0.9158847736625514,
+        "auroc_drop_vs_intact": 0.001152263374485596
+      },
+      "cheek_right|surface_rgb_fill_0.5": {
+        "auroc": 0.9319067215363512,
+        "auroc_drop_vs_intact": 0.021618655692729583
+      },
+      "eye_inner_left|face_median": {
+        "auroc": 0.9115500685871056,
+        "auroc_drop_vs_intact": 0.005486968449931351
+      },
+      "eye_inner_left|mean_gray_0.5": {
+        "auroc": 0.9141289437585735,
+        "auroc_drop_vs_intact": 0.0029080932784635305
+      },
+      "eye_inner_left|surface_rgb_fill_0.5": {
+        "auroc": 0.8712208504801097,
+        "auroc_drop_vs_intact": 0.08230452674897115
+      },
+      "eye_inner_right|face_median": {
+        "auroc": 0.9101234567901234,
+        "auroc_drop_vs_intact": 0.006913580246913575
+      },
+      "eye_inner_right|mean_gray_0.5": {
+        "auroc": 0.9109465020576132,
+        "auroc_drop_vs_intact": 0.006090534979423801
+      },
+      "eye_inner_right|surface_rgb_fill_0.5": {
+        "auroc": 0.9305349794238683,
+        "auroc_drop_vs_intact": 0.022990397805212504
+      },
+      "forehead_left|face_median": {
+        "auroc": 0.9133607681755829,
+        "auroc_drop_vs_intact": 0.003676268861454113
+      },
+      "forehead_left|mean_gray_0.5": {
+        "auroc": 0.9142386831275721,
+        "auroc_drop_vs_intact": 0.0027983539094649235
+      },
+      "forehead_left|surface_rgb_fill_0.5": {
+        "auroc": 0.9098491083676269,
+        "auroc_drop_vs_intact": 0.043676268861453926
+      },
+      "forehead_right|face_median": {
+        "auroc": 0.9059533607681756,
+        "auroc_drop_vs_intact": 0.01108367626886142
+      },
+      "forehead_right|mean_gray_0.5": {
+        "auroc": 0.910727023319616,
+        "auroc_drop_vs_intact": 0.006310013717421015
+      },
+      "forehead_right|surface_rgb_fill_0.5": {
+        "auroc": 0.9000274348422496,
+        "auroc_drop_vs_intact": 0.053497942386831254
+      },
+      "nose_bridge|face_median": {
+        "auroc": 0.9163786008230453,
+        "auroc_drop_vs_intact": 0.0006584362139916422
+      },
+      "nose_bridge|mean_gray_0.5": {
+        "auroc": 0.9144581618655693,
+        "auroc_drop_vs_intact": 0.0025788751714677094
+      },
+      "nose_bridge|surface_rgb_fill_0.5": {
+        "auroc": 0.9232921810699589,
+        "auroc_drop_vs_intact": 0.0302331961591219
+      },
+      "nose_tip|face_median": {
+        "auroc": 0.9172565157750342,
+        "auroc_drop_vs_intact": -0.00021947873799721407
+      },
+      "nose_tip|mean_gray_0.5": {
+        "auroc": 0.9179149519890261,
+        "auroc_drop_vs_intact": -0.0008779149519890783
+      },
+      "nose_tip|surface_rgb_fill_0.5": {
+        "auroc": 0.8952537722908093,
+        "auroc_drop_vs_intact": 0.05827160493827155
+      }
+    },
+    "policy_only": {
+      "binary_cond_entropy": {
+        "C": 0.01,
+        "calibration_log_loss": 0.5944030503405996,
+        "dim": 512,
+        "q": 0.2,
+        "test": {
+          "auroc": 0.7619204389574759,
+          "auroc_ci95_subject_bootstrap": [
+            0.674292812832329,
+            0.8733531158838203
+          ],
+          "balanced_accuracy": 0.6851851851851851,
+          "bootstrap_B": 1000,
+          "fpr_at_calibrated_fpr0.1_threshold": 0.05925925925925926,
+          "log_loss": 0.583267720890318,
+          "n_pairs": 270,
+          "n_positive": 135,
+          "n_subjects": 10,
+          "predictive_information_score_bits": 0.1585225515609302,
+          "tpr_at_calibrated_fpr0.1_threshold": 0.4148148148148148
+        },
+        "threshold_balanced": 0.6862121120109327,
+        "threshold_fpr0.1": 0.7905042981193013
+      },
+      "central_first": {
+        "C": 0.01,
+        "calibration_log_loss": 0.6540732359768248,
+        "dim": 512,
+        "q": 0.2,
+        "test": {
+          "auroc": 0.7145679012345679,
+          "auroc_ci95_subject_bootstrap": [
+            0.5757393195632761,
+            0.8577818307493242
+          ],
+          "balanced_accuracy": 0.6444444444444444,
+          "bootstrap_B": 1000,
+          "fpr_at_calibrated_fpr0.1_threshold": 0.08148148148148149,
+          "log_loss": 0.6176629981608782,
+          "n_pairs": 270,
+          "n_positive": 135,
+          "n_subjects": 10,
+          "predictive_information_score_bits": 0.10890065561269202,
+          "tpr_at_calibrated_fpr0.1_threshold": 0.2740740740740741
+        },
+        "threshold_balanced": 0.4566214152213528,
+        "threshold_fpr0.1": 0.6663324125348559
+      },
+      "gradient_magnitude": {
+        "C": 0.01,
+        "calibration_log_loss": 0.5729624622750675,
+        "dim": 512,
+        "q": 0.2,
+        "test": {
+          "auroc": 0.7092455418381345,
+          "auroc_ci95_subject_bootstrap": [
+            0.554891149026926,
+            0.8382273132238768
+          ],
+          "balanced_accuracy": 0.6148148148148148,
+          "bootstrap_B": 1000,
+          "fpr_at_calibrated_fpr0.1_threshold": 0.0962962962962963,
+          "log_loss": 0.6555749239172759,
+          "n_pairs": 270,
+          "n_positive": 135,
+          "n_subjects": 10,
+          "predictive_information_score_bits": 0.05420530833338655,
+          "tpr_at_calibrated_fpr0.1_threshold": 0.2740740740740741
+        },
+        "threshold_balanced": 0.7003700019627168,
+        "threshold_fpr0.1": 0.7817075236982577
+      },
+      "kg_entropy": {
+        "C": 0.01,
+        "calibration_log_loss": 0.3402570696222839,
+        "dim": 512,
+        "q": 0.2,
+        "test": {
+          "auroc": 0.9163786008230452,
+          "auroc_ci95_subject_bootstrap": [
+            0.846604330943847,
+            0.9752403550894042
+          ],
+          "balanced_accuracy": 0.8444444444444444,
+          "bootstrap_B": 1000,
+          "fpr_at_calibrated_fpr0.1_threshold": 0.15555555555555556,
+          "log_loss": 0.3809825279056226,
+          "n_pairs": 270,
+          "n_positive": 135,
+          "n_subjects": 10,
+          "predictive_information_score_bits": 0.4503583963252171,
+          "tpr_at_calibrated_fpr0.1_threshold": 0.837037037037037
+        },
+        "threshold_balanced": 0.5974274543151932,
+        "threshold_fpr0.1": 0.585340700494056
+      },
+      "random": {
+        "C": 0.01,
+        "calibration_log_loss": 0.7276853712781707,
+        "dim": 512,
+        "q": 0.2,
+        "test": {
+          "auroc": 0.47637860082304523,
+          "auroc_ci95_subject_bootstrap": [
+            0.40246634967816913,
+            0.5600390779930875
+          ],
+          "balanced_accuracy": 0.45555555555555555,
+          "bootstrap_B": 1000,
+          "fpr_at_calibrated_fpr0.1_threshold": 0.0,
+          "log_loss": 0.7412398826773732,
+          "n_pairs": 270,
+          "n_positive": 135,
+          "n_subjects": 10,
+          "predictive_information_score_bits": -0.06938310284776339,
+          "tpr_at_calibrated_fpr0.1_threshold": 0.037037037037037035
+        },
+        "threshold_balanced": 0.5631736589199793,
+        "threshold_fpr0.1": 0.7284196852043121
+      }
+    },
+    "region_only": {
+      "cheek_left": {
+        "C": 0.01,
+        "calibration_log_loss": 0.7152531202373693,
+        "dim": 256,
+        "region_class": "peripheral",
+        "test": {
+          "auroc": 0.5252126200274349,
+          "auroc_ci95_subject_bootstrap": [
+            0.3929594322737686,
+            0.6634531315099381
+          ],
+          "balanced_accuracy": 0.5222222222222223,
+          "bootstrap_B": 1000,
+          "fpr_at_calibrated_fpr0.1_threshold": 0.022222222222222223,
+          "log_loss": 0.6931295277594494,
+          "n_pairs": 270,
+          "n_positive": 135,
+          "n_subjects": 10,
+          "predictive_information_score_bits": 2.546760773325385e-05,
+          "tpr_at_calibrated_fpr0.1_threshold": 0.08148148148148149
+        },
+        "threshold_balanced": 0.4813234829159233,
+        "threshold_fpr0.1": 0.6668987125983146
+      },
+      "cheek_right": {
+        "C": 0.01,
+        "calibration_log_loss": 0.708381111896971,
+        "dim": 256,
+        "region_class": "peripheral",
+        "test": {
+          "auroc": 0.5747050754458162,
+          "auroc_ci95_subject_bootstrap": [
+            0.4426370007680491,
+            0.6629824263038548
+          ],
+          "balanced_accuracy": 0.5851851851851853,
+          "bootstrap_B": 1000,
+          "fpr_at_calibrated_fpr0.1_threshold": 0.13333333333333333,
+          "log_loss": 0.6920351088914976,
+          "n_pairs": 270,
+          "n_positive": 135,
+          "n_subjects": 10,
+          "predictive_information_score_bits": 0.0016043802811827046,
+          "tpr_at_calibrated_fpr0.1_threshold": 0.06666666666666667
+        },
+        "threshold_balanced": 0.5002034651653718,
+        "threshold_fpr0.1": 0.6263946915262452
+      },
+      "eye_inner_left": {
+        "C": 0.01,
+        "calibration_log_loss": 0.6380022091400406,
+        "dim": 256,
+        "region_class": "central",
+        "test": {
+          "auroc": 0.6920713305898492,
+          "auroc_ci95_subject_bootstrap": [
+            0.5758221198156682,
+            0.8219714996303018
+          ],
+          "balanced_accuracy": 0.6481481481481481,
+          "bootstrap_B": 1000,
+          "fpr_at_calibrated_fpr0.1_threshold": 0.06666666666666667,
+          "log_loss": 0.637214161468951,
+          "n_pairs": 270,
+          "n_positive": 135,
+          "n_subjects": 10,
+          "predictive_information_score_bits": 0.08069428926452515,
+          "tpr_at_calibrated_fpr0.1_threshold": 0.16296296296296298
+        },
+        "threshold_balanced": 0.5189942846268857,
+        "threshold_fpr0.1": 0.7219140706105686
+      },
+      "eye_inner_right": {
+        "C": 0.01,
+        "calibration_log_loss": 0.662635457028861,
+        "dim": 256,
+        "region_class": "central",
+        "test": {
+          "auroc": 0.6600274348422496,
+          "auroc_ci95_subject_bootstrap": [
+            0.5527018705763398,
+            0.7826012065847726
+          ],
+          "balanced_accuracy": 0.6444444444444444,
+          "bootstrap_B": 1000,
+          "fpr_at_calibrated_fpr0.1_threshold": 0.05925925925925926,
+          "log_loss": 0.6485355030662281,
+          "n_pairs": 270,
+          "n_positive": 135,
+          "n_subjects": 10,
+          "predictive_information_score_bits": 0.06436104588592362,
+          "tpr_at_calibrated_fpr0.1_threshold": 0.1259259259259259
+        },
+        "threshold_balanced": 0.5543883304959126,
+        "threshold_fpr0.1": 0.6951154325602252
+      },
+      "forehead_left": {
+        "C": 0.01,
+        "calibration_log_loss": 0.6113357685570602,
+        "dim": 256,
+        "region_class": "peripheral",
+        "test": {
+          "auroc": 0.7232921810699589,
+          "auroc_ci95_subject_bootstrap": [
+            0.5342135597023298,
+            0.9075388526564766
+          ],
+          "balanced_accuracy": 0.6888888888888889,
+          "bootstrap_B": 1000,
+          "fpr_at_calibrated_fpr0.1_threshold": 0.1259259259259259,
+          "log_loss": 0.6051389173360266,
+          "n_pairs": 270,
+          "n_positive": 135,
+          "n_subjects": 10,
+          "predictive_information_score_bits": 0.12696908491039793,
+          "tpr_at_calibrated_fpr0.1_threshold": 0.2
+        },
+        "threshold_balanced": 0.47787080170575663,
+        "threshold_fpr0.1": 0.6913776207749859
+      },
+      "forehead_right": {
+        "C": 0.01,
+        "calibration_log_loss": 0.6056763078261476,
+        "dim": 256,
+        "region_class": "peripheral",
+        "test": {
+          "auroc": 0.7326200274348422,
+          "auroc_ci95_subject_bootstrap": [
+            0.5509683862433863,
+            0.8835007576891016
+          ],
+          "balanced_accuracy": 0.6666666666666666,
+          "bootstrap_B": 1000,
+          "fpr_at_calibrated_fpr0.1_threshold": 0.2,
+          "log_loss": 0.6003125034549365,
+          "n_pairs": 270,
+          "n_positive": 135,
+          "n_subjects": 10,
+          "predictive_information_score_bits": 0.13393212828192436,
+          "tpr_at_calibrated_fpr0.1_threshold": 0.48148148148148145
+        },
+        "threshold_balanced": 0.5944859841071569,
+        "threshold_fpr0.1": 0.6556256667264255
+      },
+      "nose_bridge": {
+        "C": 0.01,
+        "calibration_log_loss": 0.6400297855590109,
+        "dim": 256,
+        "region_class": "central",
+        "test": {
+          "auroc": 0.6160768175582991,
+          "auroc_ci95_subject_bootstrap": [
+            0.4899726828796596,
+            0.738368156569625
+          ],
+          "balanced_accuracy": 0.6,
+          "bootstrap_B": 1000,
+          "fpr_at_calibrated_fpr0.1_threshold": 0.08888888888888889,
+          "log_loss": 0.6708045191425955,
+          "n_pairs": 270,
+          "n_positive": 135,
+          "n_subjects": 10,
+          "predictive_information_score_bits": 0.03223364682707164,
+          "tpr_at_calibrated_fpr0.1_threshold": 0.13333333333333333
+        },
+        "threshold_balanced": 0.5262925734942059,
+        "threshold_fpr0.1": 0.6068248042933786
+      },
+      "nose_tip": {
+        "C": 0.01,
+        "calibration_log_loss": 0.6333311799209673,
+        "dim": 256,
+        "region_class": "central",
+        "test": {
+          "auroc": 0.6079012345679013,
+          "auroc_ci95_subject_bootstrap": [
+            0.5016813152895155,
+            0.7431479953238372
+          ],
+          "balanced_accuracy": 0.5814814814814815,
+          "bootstrap_B": 1000,
+          "fpr_at_calibrated_fpr0.1_threshold": 0.1111111111111111,
+          "log_loss": 0.6780866040456132,
+          "n_pairs": 270,
+          "n_positive": 135,
+          "n_subjects": 10,
+          "predictive_information_score_bits": 0.02172781905015575,
+          "tpr_at_calibrated_fpr0.1_threshold": 0.17777777777777778
+        },
+        "threshold_balanced": 0.4659976678299588,
+        "threshold_fpr0.1": 0.638944031756053
+      }
+    },
+    "whole_face": {
+      "combined": {
+        "C": 0.01,
+        "calibration_log_loss": 0.23581423321572548,
+        "dim": 768,
+        "test": {
+          "auroc": 0.9799725651577504,
+          "auroc_ci95_subject_bootstrap": [
+            0.9510814276572265,
+            0.9982372979633254
+          ],
+          "balanced_accuracy": 0.9111111111111111,
+          "bootstrap_B": 1000,
+          "fpr_at_calibrated_fpr0.1_threshold": 0.08148148148148149,
+          "log_loss": 0.21303225757780261,
+          "n_pairs": 270,
+          "n_positive": 135,
+          "n_subjects": 10,
+          "predictive_information_score_bits": 0.6926594184431238,
+          "tpr_at_calibrated_fpr0.1_threshold": 0.9111111111111111
+        },
+        "threshold_balanced": 0.7589364342501164,
+        "threshold_fpr0.1": 0.7463508814333278
+      },
+      "gray16": {
+        "C": 0.01,
+        "calibration_log_loss": 0.5032108114420651,
+        "dim": 256,
+        "test": {
+          "auroc": 0.917037037037037,
+          "auroc_ci95_subject_bootstrap": [
+            0.8194004018667358,
+            0.9858032515761855
+          ],
+          "balanced_accuracy": 0.874074074074074,
+          "bootstrap_B": 1000,
+          "fpr_at_calibrated_fpr0.1_threshold": 0.08888888888888889,
+          "log_loss": 0.3951124556025342,
+          "n_pairs": 270,
+          "n_positive": 135,
+          "n_subjects": 10,
+          "predictive_information_score_bits": 0.4299732197087631,
+          "tpr_at_calibrated_fpr0.1_threshold": 0.7703703703703704
+        },
+        "threshold_balanced": 0.5532368867277082,
+        "threshold_fpr0.1": 0.6791553904865444
+      },
+      "hog": {
+        "C": 0.1,
+        "calibration_log_loss": 0.04000888114412354,
+        "dim": 1764,
+        "test": {
+          "auroc": 0.9851851851851852,
+          "auroc_ci95_subject_bootstrap": [
+            0.9736487667941105,
+            0.9984962970489286
+          ],
+          "balanced_accuracy": 0.9222222222222223,
+          "bootstrap_B": 1000,
+          "fpr_at_calibrated_fpr0.1_threshold": 0.2740740740740741,
+          "log_loss": 0.22601470799113638,
+          "n_pairs": 270,
+          "n_positive": 135,
+          "n_subjects": 10,
+          "predictive_information_score_bits": 0.6739297016132204,
+          "tpr_at_calibrated_fpr0.1_threshold": 0.9925925925925926
+        },
+        "threshold_balanced": 0.685574526863113,
+        "threshold_fpr0.1": 0.11088672476231892
+      },
+      "surface_KG16": {
+        "C": 0.01,
+        "calibration_log_loss": 0.5257725191889111,
+        "dim": 256,
+        "test": {
+          "auroc": 0.808559670781893,
+          "auroc_ci95_subject_bootstrap": [
+            0.70420542337209,
+            0.8947667985798969
+          ],
+          "balanced_accuracy": 0.6814814814814815,
+          "bootstrap_B": 1000,
+          "fpr_at_calibrated_fpr0.1_threshold": 0.1037037037037037,
+          "log_loss": 0.534309601544444,
+          "n_pairs": 270,
+          "n_positive": 135,
+          "n_subjects": 10,
+          "predictive_information_score_bits": 0.22915418755247263,
+          "tpr_at_calibrated_fpr0.1_threshold": 0.4444444444444444
+        },
+        "threshold_balanced": 0.6604056733336323,
+        "threshold_fpr0.1": 0.7024013562442376
+      },
+      "surface_z16": {
+        "C": 0.01,
+        "calibration_log_loss": 0.35350028031530417,
+        "dim": 256,
+        "test": {
+          "auroc": 0.9535253772290808,
+          "auroc_ci95_subject_bootstrap": [
+            0.9139971264367817,
+            0.9896713917525773
+          ],
+          "balanced_accuracy": 0.8666666666666667,
+          "bootstrap_B": 1000,
+          "fpr_at_calibrated_fpr0.1_threshold": 0.13333333333333333,
+          "log_loss": 0.3212730422546969,
+          "n_pairs": 270,
+          "n_positive": 135,
+          "n_subjects": 10,
+          "predictive_information_score_bits": 0.5365009751678385,
+          "tpr_at_calibrated_fpr0.1_threshold": 0.8740740740740741
+        },
+        "threshold_balanced": 0.7817374831387028,
+        "threshold_fpr0.1": 0.7316851717799421
+      }
+    }
+  },
+  "runtime_s": 412.1452325829305,
+  "split": {
+    "calibration": [
+      "fei041",
+      "fei049",
+      "fei066",
+      "fei075",
+      "fei076",
+      "fei097",
+      "fei110",
+      "fei127",
+      "fei170",
+      "fei196"
+    ],
+    "test": [
+      "fei044",
+      "fei063",
+      "fei065",
+      "fei070",
+      "fei098",
+      "fei108",
+      "fei128",
+      "fei130",
+      "fei175",
+      "fei184"
+    ],
+    "train": [
+      "fei004",
+      "fei009",
+      "fei015",
+      "fei017",
+      "fei020",
+      "fei033",
+      "fei040",
+      "fei048",
+      "fei053",
+      "fei060",
+      "fei067",
+      "fei069",
+      "fei084",
+      "fei091",
+      "fei102",
+      "fei120",
+      "fei122",
+      "fei144",
+      "fei148",
+      "fei150",
+      "fei159",
+      "fei168",
+      "fei176",
+      "fei179",
+      "fei183",
+      "fei185",
+      "fei189",
+      "fei192",
+      "fei193",
+      "fei195"
+    ]
+  }
+}

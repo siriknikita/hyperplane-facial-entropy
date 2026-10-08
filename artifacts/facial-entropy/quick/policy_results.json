@@ -1,0 +1,111 @@
+{
+  "by_policy": {
+    "binary_cond_entropy@q0.1": {
+      "frac_in_central_patches_mean": 0.11016335227272726,
+      "frac_in_features_mask_mean": 0.2259213226010101,
+      "jaccard_stability_mean": 0.6948545099551292,
+      "n": 10,
+      "q_achieved_mean": 0.07879885205838989
+    },
+    "binary_cond_entropy@q0.2": {
+      "frac_in_central_patches_mean": 0.1467147481836591,
+      "frac_in_features_mask_mean": 0.2692423643280426,
+      "jaccard_stability_mean": 0.7606852567957004,
+      "n": 10,
+      "q_achieved_mean": 0.16224625730604955
+    },
+    "binary_cond_entropy@q0.4": {
+      "frac_in_central_patches_mean": 0.17219660558729669,
+      "frac_in_features_mask_mean": 0.3196299049933131,
+      "jaccard_stability_mean": 0.8563650159333693,
+      "n": 10,
+      "q_achieved_mean": 0.32693183822548266
+    },
+    "central_first@q0.1": {
+      "frac_in_central_patches_mean": 0.9109165877525252,
+      "frac_in_features_mask_mean": 0.9251148200757576,
+      "jaccard_stability_mean": null,
+      "n": 10,
+      "q_achieved_mean": 0.07879885205838989
+    },
+    "central_first@q0.2": {
+      "frac_in_central_patches_mean": 0.6760576112444319,
+      "frac_in_features_mask_mean": 0.8757933761806938,
+      "jaccard_stability_mean": null,
+      "n": 10,
+      "q_achieved_mean": 0.16224625730604955
+    },
+    "central_first@q0.4": {
+      "frac_in_central_patches_mean": 0.35064319683971573,
+      "frac_in_features_mask_mean": 0.6349280243607964,
+      "jaccard_stability_mean": null,
+      "n": 10,
+      "q_achieved_mean": 0.32693183822548266
+    },
+    "gradient_magnitude@q0.1": {
+      "frac_in_central_patches_mean": 0.17980666035353537,
+      "frac_in_features_mask_mean": 0.4072360321969697,
+      "jaccard_stability_mean": null,
+      "n": 10,
+      "q_achieved_mean": 0.07879885205838989
+    },
+    "gradient_magnitude@q0.2": {
+      "frac_in_central_patches_mean": 0.24462850587488566,
+      "frac_in_features_mask_mean": 0.42670806344129425,
+      "jaccard_stability_mean": null,
+      "n": 10,
+      "q_achieved_mean": 0.16224625730604955
+    },
+    "gradient_magnitude@q0.4": {
+      "frac_in_central_patches_mean": 0.25372668026912376,
+      "frac_in_features_mask_mean": 0.4183879791567513,
+      "jaccard_stability_mean": null,
+      "n": 10,
+      "q_achieved_mean": 0.32693183822548266
+    },
+    "kg_entropy@q0.1": {
+      "frac_in_central_patches_mean": 0.0,
+      "frac_in_features_mask_mean": 0.01623263888888889,
+      "jaccard_stability_mean": 0.770872460872461,
+      "n": 10,
+      "q_achieved_mean": 0.07879885205838989
+    },
+    "kg_entropy@q0.2": {
+      "frac_in_central_patches_mean": 0.001375679347826087,
+      "frac_in_features_mask_mean": 0.02624828460417348,
+      "jaccard_stability_mean": 0.8762904038502374,
+      "n": 10,
+      "q_achieved_mean": 0.16224625730604955
+    },
+    "kg_entropy@q0.4": {
+      "frac_in_central_patches_mean": 0.02748458123593404,
+      "frac_in_features_mask_mean": 0.09192106673095767,
+      "jaccard_stability_mean": 0.9301174175381688,
+      "n": 10,
+      "q_achieved_mean": 0.32693183822548266
+    },
+    "random@q0.1": {
+      "frac_in_central_patches_mean": 0.1436544152462121,
+      "frac_in_features_mask_mean": 0.26146963778409094,
+      "jaccard_stability_mean": null,
+      "n": 200,
+      "q_achieved_mean": 0.07879885205838989
+    },
+    "random@q0.2": {
+      "frac_in_central_patches_mean": 0.13990277345671903,
+      "frac_in_features_mask_mean": 0.26002664590546276,
+      "jaccard_stability_mean": null,
+      "n": 200,
+      "q_achieved_mean": 0.16224625730604955
+    },
+    "random@q0.4": {
+      "frac_in_central_patches_mean": 0.13616231878415389,
+      "frac_in_features_mask_mean": 0.2566177828455741,
+      "jaccard_stability_mean": null,
+      "n": 200,
+      "q_achieved_mean": 0.32693183822548266
+    }
+  },
+  "n_images": 10,
+  "usefulness": "untested here (see Experiment 6)"
+}

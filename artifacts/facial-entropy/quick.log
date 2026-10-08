@@ -1,0 +1,12 @@
+[forge-entropy] building manifest for 2800 images (FEI)
+[forge-entropy] first 10 primary faces aligned in 5.4s -> projected 161s for all faces
+[forge-entropy] primary: 50/50 faces aligned
+/Users/mykytasiryk/Development/personal-projects/hyperplane-facial-entropy/.venv/lib/python3.12/site-packages/face_alignment/api.py:215: UserWarning: No faces were detected.
+  warnings.warn("No faces were detected.")
+[forge-entropy] secondary: 244/250 faces aligned
+[forge-entropy] prepare done: 10 calibration faces, s_z=0.1518, lum sigma=3.0
+[forge-entropy] first 10 primary images analysed in 8.7s -> projected 43s
+/Users/mykytasiryk/Development/personal-projects/hyperplane-facial-entropy/src/facial_entropy/experiments.py:438: RuntimeWarning: Mean of empty slice
+  out[f"mean_{k}"] = np.nanmean(arr, axis=0)
+done: /Users/mykytasiryk/Development/personal-projects/hyperplane-facial-entropy/artifacts/facial-entropy/quick/results.md
+exit 0

@@ -1,0 +1,525 @@
+{
+  "cohort": {
+    "available_subjects": 200,
+    "n_calibration": 10,
+    "n_primary": 50,
+    "n_secondary": 250,
+    "n_test": 40,
+    "notes": [],
+    "primary_pose": "11",
+    "requested_subjects": 50
+  },
+  "core": {
+    "core_file": "/Users/mykytasiryk/Development/personal-projects/hyperplane-facial-entropy/.venv/lib/python3.12/site-packages/forge_detect/_core.abi3.so",
+    "core_symbols": [
+      "solve_and_extract"
+    ],
+    "forge_detect_file": "/Users/mykytasiryk/Development/personal-projects/hyperplane-facial-entropy/.venv/lib/python3.12/site-packages/forge_detect/__init__.py",
+    "rayon_num_threads_env": "4"
+  },
+  "data_root": null,
+  "dataset": {
+    "candidates": [
+      "FEI: /Users/mykytasiryk/Development/datasets/fei-face-data-dataset (2800 images)"
+    ],
+    "dedup_sha256_excluded": 0,
+    "n_images": 2800,
+    "n_subjects": 200,
+    "name": "FEI"
+  },
+  "dataset_arg": "auto",
+  "download": false,
+  "environment": {
+    "argv": [
+      "/Users/mykytasiryk/Development/personal-projects/hyperplane-facial-entropy/.venv/bin/forge-entropy",
+      "all",
+      "--profile",
+      "quick",
+      "--dataset",
+      "auto",
+      "--seed",
+      "20261008",
+      "--output",
+      "artifacts/facial-entropy/quick"
+    ],
+    "cpu_count": 14,
+    "cwd": "/Users/mykytasiryk/Development/personal-projects/hyperplane-facial-entropy",
+    "machine": "arm64",
+    "packages": {
+      "Pillow": "12.3.0",
+      "face-alignment": "1.5.0",
+      "forge-detect": "0.1.0",
+      "matplotlib": "3.11.2",
+      "numpy": "2.5.3",
+      "pandas": "3.0.6",
+      "scikit-image": "0.26.0",
+      "scikit-learn": "1.9.1",
+      "scipy": "1.18.1",
+      "torch": "2.14.1"
+    },
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "processor": "arm",
+    "python": "3.12.11 (main, Sep  2 2025, 14:12:30) [Clang 20.1.4 ]",
+    "rayon_num_threads_env": "4",
+    "timestamp": "2026-10-08T22:01:54+0300"
+  },
+  "forge_repo_git": {
+    "commit": "d2881b09d3388cb46c93790f0f6bdeb969f769bb",
+    "dirty": true,
+    "dirty_files": [
+      " M .gitignore",
+      " M python/forge_detect/serving_infer.py",
+      " M serving/app.py",
+      "?? demo-artifacts/",
+      "?? serving/artifacts.py",
+      "?? tree.txt"
+    ],
+    "path": "/Users/mykytasiryk/Development/personal-projects/deepfake-detection-v2"
+  },
+  "landmark_assets": {
+    "checkpoint_dir": "/Users/mykytasiryk/.cache/torch/hub/checkpoints",
+    "estimated_download_bytes": 0,
+    "face_alignment_version": "1.5.0",
+    "missing": {},
+    "present": {
+      "2DFAN4-11f355bf06.pth.tar": {
+        "bytes": 95641761,
+        "path": "/Users/mykytasiryk/.cache/torch/hub/checkpoints/2DFAN4-11f355bf06.pth.tar"
+      },
+      "s3fd-619a316812.pth": {
+        "bytes": 89843225,
+        "path": "/Users/mykytasiryk/.cache/torch/hub/checkpoints/s3fd-619a316812.pth"
+      }
+    }
+  },
+  "landmark_assets_after": {
+    "checkpoint_dir": "/Users/mykytasiryk/.cache/torch/hub/checkpoints",
+    "estimated_download_bytes": 0,
+    "face_alignment_version": "1.5.0",
+    "missing": {},
+    "present": {
+      "2DFAN4-11f355bf06.pth.tar": {
+        "bytes": 95641761,
+        "path": "/Users/mykytasiryk/.cache/torch/hub/checkpoints/2DFAN4-11f355bf06.pth.tar"
+      },
+      "s3fd-619a316812.pth": {
+        "bytes": 89843225,
+        "path": "/Users/mykytasiryk/.cache/torch/hub/checkpoints/s3fd-619a316812.pth"
+      }
+    }
+  },
+  "near_duplicates": {
+    "examples": [
+      [
+        "fei004-11",
+        "fei009-11",
+        1
+      ],
+      [
+        "fei004-11",
+        "fei040-11",
+        2
+      ],
+      [
+        "fei004-11",
+        "fei053-11",
+        1
+      ],
+      [
+        "fei004-11",
+        "fei065-11",
+        2
+      ],
+      [
+        "fei004-11",
+        "fei075-11",
+        2
+      ],
+      [
+        "fei004-11",
+        "fei110-11",
+        2
+      ],
+      [
+        "fei009-11",
+        "fei040-11",
+        1
+      ],
+      [
+        "fei009-11",
+        "fei053-11",
+        0
+      ],
+      [
+        "fei009-11",
+        "fei110-11",
+        1
+      ],
+      [
+        "fei015-11",
+        "fei091-11",
+        2
+      ],
+      [
+        "fei015-11",
+        "fei130-11",
+        2
+      ],
+      [
+        "fei017-11",
+        "fei041-11",
+        2
+      ],
+      [
+        "fei017-11",
+        "fei120-11",
+        1
+      ],
+      [
+        "fei017-11",
+        "fei127-11",
+        2
+      ],
+      [
+        "fei020-11",
+        "fei193-11",
+        0
+      ],
+      [
+        "fei040-11",
+        "fei049-11",
+        2
+      ],
+      [
+        "fei040-11",
+        "fei053-11",
+        1
+      ],
+      [
+        "fei040-11",
+        "fei075-11",
+        2
+      ],
+      [
+        "fei040-11",
+        "fei110-11",
+        2
+      ],
+      [
+        "fei041-11",
+        "fei066-11",
+        1
+      ],
+      [
+        "fei041-11",
+        "fei076-11",
+        2
+      ],
+      [
+        "fei041-11",
+        "fei120-11",
+        1
+      ],
+      [
+        "fei041-11",
+        "fei127-11",
+        2
+      ],
+      [
+        "fei041-11",
+        "fei192-11",
+        2
+      ],
+      [
+        "fei044-11",
+        "fei120-11",
+        2
+      ],
+      [
+        "fei044-11",
+        "fei127-11",
+        1
+      ],
+      [
+        "fei048-11",
+        "fei067-11",
+        2
+      ],
+      [
+        "fei053-11",
+        "fei110-11",
+        1
+      ],
+      [
+        "fei063-11",
+        "fei067-11",
+        2
+      ],
+      [
+        "fei063-11",
+        "fei196-11",
+        1
+      ],
+      [
+        "fei065-11",
+        "fei108-11",
+        2
+      ],
+      [
+        "fei066-11",
+        "fei076-11",
+        1
+      ],
+      [
+        "fei066-11",
+        "fei120-11",
+        2
+      ],
+      [
+        "fei067-11",
+        "fei196-11",
+        1
+      ],
+      [
+        "fei069-11",
+        "fei150-11",
+        1
+      ],
+      [
+        "fei069-11",
+        "fei168-11",
+        2
+      ],
+      [
+        "fei076-11",
+        "fei168-11",
+        2
+      ],
+      [
+        "fei091-11",
+        "fei130-11",
+        2
+      ],
+      [
+        "fei097-11",
+        "fei098-11",
+        2
+      ],
+      [
+        "fei097-11",
+        "fei128-11",
+        2
+      ],
+      [
+        "fei097-11",
+        "fei176-11",
+        2
+      ],
+      [
+        "fei097-11",
+        "fei184-11",
+        1
+      ],
+      [
+        "fei098-11",
+        "fei128-11",
+        2
+      ],
+      [
+        "fei098-11",
+        "fei144-11",
+        1
+      ],
+      [
+        "fei098-11",
+        "fei184-11",
+        1
+      ],
+      [
+        "fei102-11",
+        "fei159-11",
+        2
+      ],
+      [
+        "fei102-11",
+        "fei170-11",
+        2
+      ],
+      [
+        "fei102-11",
+        "fei184-11",
+        2
+      ],
+      [
+        "fei102-11",
+        "fei189-11",
+        0
+      ],
+      [
+        "fei108-11",
+        "fei110-11",
+        2
+      ]
+    ],
+    "n_near_duplicate_pairs_hamming_le_2": 63,
+    "n_screened": 50
+  },
+  "output": "/Users/mykytasiryk/Development/personal-projects/hyperplane-facial-entropy/artifacts/facial-entropy/quick",
+  "profile": {
+    "analysis": {
+      "aligned_size": 256,
+      "binary_thresholds": [
+        0.35,
+        0.5,
+        0.65
+      ],
+      "bins": [
+        8,
+        16,
+        32
+      ],
+      "block_samples_per_patch": 800,
+      "calib_quantile_hi": 0.995,
+      "calib_quantile_lo": 0.005,
+      "calib_samples_per_class": 900,
+      "codebook_sizes": [
+        16,
+        32
+      ],
+      "derivative_stencil_radius": 1,
+      "forehead_extension": 0.8,
+      "height_scale_floor": 1e-06,
+      "jitter_draws": 20,
+      "jitter_sds": [
+        1.0,
+        2.0
+      ],
+      "min_support": 0.9,
+      "patch_size": 32,
+      "policy_area_fractions": [
+        0.1,
+        0.2,
+        0.4
+      ],
+      "policy_random_seeds": 20,
+      "primary_bins": 16,
+      "primary_window": 21,
+      "resolutions": [
+        128,
+        256,
+        512
+      ],
+      "samples_per_patch": 900,
+      "scale_floor": 1e-09,
+      "smooth_sigma": 1.0,
+      "smooth_sigmas": [
+        0.5,
+        1.0,
+        2.0
+      ],
+      "stride": 4,
+      "tile_size": 16,
+      "windows": [
+        11,
+        21,
+        31
+      ]
+    },
+    "calibration_fraction": 0.2,
+    "experiments": [
+      "exp0",
+      "exp1",
+      "exp2",
+      "exp3",
+      "exp4",
+      "exp5",
+      "exp6"
+    ],
+    "extra": {
+      "config_path": "/Users/mykytasiryk/Development/personal-projects/hyperplane-facial-entropy/experiments/facial_entropy/configs/quick.toml"
+    },
+    "landmark_device": "cpu",
+    "n_subjects": 50,
+    "name": "quick",
+    "primary_pose": "11",
+    "robustness_subset": 10,
+    "run_resolution_sensitivity": true,
+    "solver": {
+      "albedo_window_radius": 2,
+      "c_z": 1.0,
+      "epsilon": 0.001,
+      "k_ratio": 1.4142135623730951,
+      "n_scales": 4,
+      "neigh_radius": 6,
+      "p_edge": 0.7,
+      "p_flat": 0.3,
+      "pde_alpha": 0.5,
+      "pde_beta": 5.0,
+      "pde_lambda": 1.0,
+      "pde_log_every": 10,
+      "pde_max_iter": 500,
+      "pde_tol": 1e-05,
+      "rayon_threads": 4,
+      "sigma_base": 1.0,
+      "sigma_ref": 4.0,
+      "tensor_window_radius": 2,
+      "trust_mode": "heuristic",
+      "w_b": 0.114,
+      "w_g": 0.587,
+      "w_r": 0.299
+    },
+    "stats": {
+      "alpha": 0.05,
+      "bootstrap": 10000,
+      "permutations": 10000,
+      "verification_bootstrap": 1000
+    },
+    "strata_poses": [
+      "12",
+      "13",
+      "14"
+    ],
+    "synthetic_only": false,
+    "verification_poses": [
+      "05",
+      "06",
+      "11",
+      "12",
+      "13",
+      "14"
+    ]
+  },
+  "project_git": {
+    "commit": null,
+    "dirty": null,
+    "dirty_files": [],
+    "error": "CalledProcessError(128, ['git', '-C', '/Users/mykytasiryk/Development/personal-projects/hyperplane-facial-entropy', 'rev-parse', 'HEAD'])",
+    "path": "/Users/mykytasiryk/Development/personal-projects/hyperplane-facial-entropy"
+  },
+  "seed": 20261008,
+  "source_digest": "871de52f768b2ab6",
+  "status": {
+    "exp0": "done (0 integrity failures, 3 audit findings)",
+    "exp1": "done (binary endpoints)",
+    "exp2": "done (surface endpoints + maps + atlas)",
+    "exp3": "done",
+    "exp4": "done",
+    "exp5": "done",
+    "exp6": "done",
+    "prepare": "done",
+    "report": "done (17 figures)"
+  },
+  "timings_s": {
+    "align_primary": 17.598047874867916,
+    "align_secondary": 75.61916795838624,
+    "calibration": 2.1885726670734584,
+    "exp1_exp2": 46.902691250201315,
+    "exp3": 206.41956487484276,
+    "exp4": 116.68410191591829,
+    "exp5": 4.765036040917039,
+    "exp6": 412.15018954174593,
+    "manifest": 1.148098083678633,
+    "primary_metrics": 45.58833658415824,
+    "qa": 94.16966512519866
+  }
+}
