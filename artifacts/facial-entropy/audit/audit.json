@@ -1,0 +1,91 @@
+{
+  "core": {
+    "core_file": "/Users/mykytasiryk/Development/personal-projects/hyperplane-facial-entropy/.venv/lib/python3.12/site-packages/forge_detect/_core.abi3.so",
+    "core_symbols": [
+      "solve_and_extract"
+    ],
+    "forge_detect_file": "/Users/mykytasiryk/Development/personal-projects/hyperplane-facial-entropy/.venv/lib/python3.12/site-packages/forge_detect/__init__.py",
+    "rayon_num_threads_env": null
+  },
+  "data": {
+    "n_images": 2800,
+    "n_subjects": 200,
+    "poses": [
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "06",
+      "07",
+      "08",
+      "09",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14"
+    ],
+    "root": "/Users/mykytasiryk/Development/datasets/fei-face-data-dataset"
+  },
+  "environment": {
+    "argv": [
+      "/Users/mykytasiryk/Development/personal-projects/hyperplane-facial-entropy/.venv/bin/forge-entropy",
+      "audit",
+      "--output",
+      "artifacts/facial-entropy/audit"
+    ],
+    "cpu_count": 14,
+    "cwd": "/Users/mykytasiryk/Development/personal-projects/hyperplane-facial-entropy",
+    "machine": "arm64",
+    "packages": {
+      "Pillow": "12.3.0",
+      "face-alignment": "1.5.0",
+      "forge-detect": "0.1.0",
+      "matplotlib": "3.11.2",
+      "numpy": "2.5.3",
+      "pandas": "3.0.6",
+      "scikit-image": "0.26.0",
+      "scikit-learn": "1.9.1",
+      "scipy": "1.18.1",
+      "torch": "2.14.1"
+    },
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "processor": "arm",
+    "python": "3.12.11 (main, Sep  2 2025, 14:12:30) [Clang 20.1.4 ]",
+    "rayon_num_threads_env": null,
+    "timestamp": "2026-10-08T22:02:03+0300"
+  },
+  "forge_repo": "/Users/mykytasiryk/Development/personal-projects/deepfake-detection-v2",
+  "forge_repo_git": {
+    "commit": "d2881b09d3388cb46c93790f0f6bdeb969f769bb",
+    "dirty": true,
+    "dirty_files": [
+      " M .gitignore",
+      " M python/forge_detect/serving_infer.py",
+      " M serving/app.py",
+      "?? demo-artifacts/",
+      "?? serving/artifacts.py",
+      "?? tree.txt"
+    ],
+    "path": "/Users/mykytasiryk/Development/personal-projects/deepfake-detection-v2"
+  },
+  "landmark_assets": {
+    "checkpoint_dir": "/Users/mykytasiryk/.cache/torch/hub/checkpoints",
+    "estimated_download_bytes": 0,
+    "face_alignment_version": "1.5.0",
+    "missing": {},
+    "present": {
+      "2DFAN4-11f355bf06.pth.tar": {
+        "bytes": 95641761,
+        "path": "/Users/mykytasiryk/.cache/torch/hub/checkpoints/2DFAN4-11f355bf06.pth.tar"
+      },
+      "s3fd-619a316812.pth": {
+        "bytes": 89843225,
+        "path": "/Users/mykytasiryk/.cache/torch/hub/checkpoints/s3fd-619a316812.pth"
+      }
+    }
+  },
+  "rust_ok": true,
+  "source_digest": "871de52f768b2ab6"
+}
