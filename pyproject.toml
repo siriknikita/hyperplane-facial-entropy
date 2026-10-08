@@ -1,0 +1,54 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "facial-entropy"
+version = "0.1.0"
+description = "Regional facial entropy experiments on the Hyperplane-Forge settled surface (standalone project reusing the forge-detect Rust core)."
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+license = { text = "MIT" }
+authors = [{ name = "Siryk Mykyta" }]
+dependencies = [
+    "forge-detect",
+    "numpy>=1.26",
+    "scipy>=1.13",
+    "pandas>=2.0",
+    "matplotlib>=3.8",
+    "Pillow>=10.0",
+    "scikit-learn>=1.4",
+]
+
+[project.optional-dependencies]
+# Landmark/analysis stack used by `prepare` on real data. `uv sync --extra facial-entropy`.
+facial-entropy = [
+    "face-alignment>=1.4",
+    "scikit-image>=0.22",
+    "opencv-python-headless>=4.9",
+]
+dev = [
+    "pytest>=8",
+    "ruff>=0.6",
+]
+
+[project.scripts]
+forge-entropy = "facial_entropy.cli:main"
+
+[tool.uv]
+# Re-resolve the sibling Hyperplane-Forge checkout; its Rust extension is built by maturin at sync time.
+reinstall-package = []
+
+[tool.uv.sources]
+forge-detect = { path = "../deepfake-detection-v2" }
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/facial_entropy"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"

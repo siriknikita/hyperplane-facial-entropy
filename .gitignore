@@ -1,0 +1,12 @@
+# environments / caches
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+# resumable intermediates and large derived tables (see ARCHIVE.md in each results dir)
+artifacts/facial-entropy/*/cache/
+artifacts/facial-entropy/*/image_metrics.csv
+artifacts/facial-entropy/*/ablation_metrics.csv
+artifacts/*.zip
+.DS_Store
