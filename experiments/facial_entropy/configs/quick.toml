@@ -1,0 +1,17 @@
+# Quick profile: ~50 real subjects (10 calibration / 40 test), full cheap experiment sequence.
+[profile]
+name = "quick"
+synthetic_only = false
+n_subjects = 50
+calibration_fraction = 0.20
+robustness_subset = 10
+primary_pose = "11"
+verification_poses = ["05", "06", "11", "12", "13", "14"]
+experiments = ["exp0", "exp1", "exp2", "exp3", "exp4", "exp5", "exp6"]
+run_resolution_sensitivity = true
+landmark_device = "cpu"
+
+[stats]
+bootstrap = 10000
+permutations = 10000
+verification_bootstrap = 1000

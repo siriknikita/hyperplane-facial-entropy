@@ -1,0 +1,18 @@
+# Smoke profile: synthetic pseudo-faces only; validates the orchestration offline.
+[profile]
+name = "smoke"
+synthetic_only = true
+n_subjects = 12
+calibration_fraction = 0.25
+robustness_subset = 3
+experiments = ["exp0", "exp1", "exp2", "exp3", "exp4", "exp5", "exp6"]
+run_resolution_sensitivity = true
+
+[stats]
+bootstrap = 2000
+permutations = 2000
+verification_bootstrap = 200
+
+[analysis]
+jitter_draws = 5
+policy_random_seeds = 5
