@@ -2,6 +2,15 @@
 
 All notable changes to this project. Format follows Keep a Changelog; newest first.
 
+## [v0.3.0] - 2026-10-08
+### Added
+- Rust/API/data audit (`artifacts/facial-entropy/audit`), quick profile on 50 FEI subjects with all six experiments, results bundle.
+### Findings
+- Co-primary endpoints disagree in sign on real faces: binary conditional entropy higher centrally (+0.055 bits), Gaussian-curvature entropy lower centrally (-0.78 bits).
+### Changed
+- Surface cache persists baseline surfaces only (2 GB budget projection) after the quick run's cache reached 3.7 GB.
+
+
 ## [v0.2.0] - 2026-10-08
 ### Added
 - Smoke profile run on synthetic pseudo-faces with explicit landmarks (`artifacts/facial-entropy/smoke`).
