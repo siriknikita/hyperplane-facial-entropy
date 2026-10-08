@@ -1,0 +1,231 @@
+{
+  "cohort": {
+    "available_subjects": 12,
+    "n_calibration": 3,
+    "n_primary": 12,
+    "n_secondary": 0,
+    "n_test": 9,
+    "notes": [],
+    "primary_pose": "11",
+    "requested_subjects": 12
+  },
+  "core": {
+    "core_file": "/Users/mykytasiryk/Development/personal-projects/hyperplane-facial-entropy/.venv/lib/python3.12/site-packages/forge_detect/_core.abi3.so",
+    "core_symbols": [
+      "solve_and_extract"
+    ],
+    "forge_detect_file": "/Users/mykytasiryk/Development/personal-projects/hyperplane-facial-entropy/.venv/lib/python3.12/site-packages/forge_detect/__init__.py",
+    "rayon_num_threads_env": "4"
+  },
+  "data_root": null,
+  "dataset": {
+    "n_images": 12,
+    "name": "SYNTHETIC",
+    "note": "synthetic fixtures only; never a real-data result"
+  },
+  "dataset_arg": "auto",
+  "download": false,
+  "environment": {
+    "argv": [
+      "/Users/mykytasiryk/Development/personal-projects/hyperplane-facial-entropy/.venv/bin/forge-entropy",
+      "all",
+      "--profile",
+      "smoke",
+      "--seed",
+      "20261008",
+      "--output",
+      "artifacts/facial-entropy/smoke"
+    ],
+    "cpu_count": 14,
+    "cwd": "/Users/mykytasiryk/Development/personal-projects/hyperplane-facial-entropy",
+    "machine": "arm64",
+    "packages": {
+      "Pillow": "12.3.0",
+      "face-alignment": "1.5.0",
+      "forge-detect": "0.1.0",
+      "matplotlib": "3.11.2",
+      "numpy": "2.5.3",
+      "pandas": "3.0.6",
+      "scikit-image": "0.26.0",
+      "scikit-learn": "1.9.1",
+      "scipy": "1.18.1",
+      "torch": "2.14.1"
+    },
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "processor": "arm",
+    "python": "3.12.11 (main, Sep  2 2025, 14:12:30) [Clang 20.1.4 ]",
+    "rayon_num_threads_env": "4",
+    "timestamp": "2026-10-08T21:55:58+0300"
+  },
+  "forge_repo_git": {
+    "commit": "d2881b09d3388cb46c93790f0f6bdeb969f769bb",
+    "dirty": true,
+    "dirty_files": [
+      " M .gitignore",
+      " M python/forge_detect/serving_infer.py",
+      " M serving/app.py",
+      "?? demo-artifacts/",
+      "?? serving/artifacts.py",
+      "?? tree.txt"
+    ],
+    "path": "/Users/mykytasiryk/Development/personal-projects/deepfake-detection-v2"
+  },
+  "output": "/Users/mykytasiryk/Development/personal-projects/hyperplane-facial-entropy/artifacts/facial-entropy/smoke",
+  "profile": {
+    "analysis": {
+      "aligned_size": 256,
+      "binary_thresholds": [
+        0.35,
+        0.5,
+        0.65
+      ],
+      "bins": [
+        8,
+        16,
+        32
+      ],
+      "block_samples_per_patch": 800,
+      "calib_quantile_hi": 0.995,
+      "calib_quantile_lo": 0.005,
+      "calib_samples_per_class": 900,
+      "codebook_sizes": [
+        16,
+        32
+      ],
+      "derivative_stencil_radius": 1,
+      "forehead_extension": 0.8,
+      "height_scale_floor": 1e-06,
+      "jitter_draws": 5,
+      "jitter_sds": [
+        1.0,
+        2.0
+      ],
+      "min_support": 0.9,
+      "patch_size": 32,
+      "policy_area_fractions": [
+        0.1,
+        0.2,
+        0.4
+      ],
+      "policy_random_seeds": 5,
+      "primary_bins": 16,
+      "primary_window": 21,
+      "resolutions": [
+        128,
+        256,
+        512
+      ],
+      "samples_per_patch": 900,
+      "scale_floor": 1e-09,
+      "smooth_sigma": 1.0,
+      "smooth_sigmas": [
+        0.5,
+        1.0,
+        2.0
+      ],
+      "stride": 4,
+      "tile_size": 16,
+      "windows": [
+        11,
+        21,
+        31
+      ]
+    },
+    "calibration_fraction": 0.25,
+    "experiments": [
+      "exp0",
+      "exp1",
+      "exp2",
+      "exp3",
+      "exp4",
+      "exp5",
+      "exp6"
+    ],
+    "extra": {
+      "config_path": "/Users/mykytasiryk/Development/personal-projects/hyperplane-facial-entropy/experiments/facial_entropy/configs/smoke.toml"
+    },
+    "landmark_device": "cpu",
+    "n_subjects": 12,
+    "name": "smoke",
+    "primary_pose": "11",
+    "robustness_subset": 3,
+    "run_resolution_sensitivity": true,
+    "solver": {
+      "albedo_window_radius": 2,
+      "c_z": 1.0,
+      "epsilon": 0.001,
+      "k_ratio": 1.4142135623730951,
+      "n_scales": 4,
+      "neigh_radius": 6,
+      "p_edge": 0.7,
+      "p_flat": 0.3,
+      "pde_alpha": 0.5,
+      "pde_beta": 5.0,
+      "pde_lambda": 1.0,
+      "pde_log_every": 10,
+      "pde_max_iter": 500,
+      "pde_tol": 1e-05,
+      "rayon_threads": 4,
+      "sigma_base": 1.0,
+      "sigma_ref": 4.0,
+      "tensor_window_radius": 2,
+      "trust_mode": "heuristic",
+      "w_b": 0.114,
+      "w_g": 0.587,
+      "w_r": 0.299
+    },
+    "stats": {
+      "alpha": 0.05,
+      "bootstrap": 2000,
+      "permutations": 2000,
+      "verification_bootstrap": 200
+    },
+    "strata_poses": [
+      "12",
+      "13",
+      "14"
+    ],
+    "synthetic_only": true,
+    "verification_poses": [
+      "05",
+      "06",
+      "11",
+      "12",
+      "13",
+      "14"
+    ]
+  },
+  "project_git": {
+    "commit": null,
+    "dirty": null,
+    "dirty_files": [],
+    "error": "CalledProcessError(128, ['git', '-C', '/Users/mykytasiryk/Development/personal-projects/hyperplane-facial-entropy', 'rev-parse', 'HEAD'])",
+    "path": "/Users/mykytasiryk/Development/personal-projects/hyperplane-facial-entropy"
+  },
+  "seed": 20261008,
+  "source_digest": "871de52f768b2ab6",
+  "status": {
+    "exp0": "done (0 integrity failures, 3 audit findings)",
+    "exp1": "done (binary endpoints)",
+    "exp2": "done (surface endpoints + maps + atlas)",
+    "exp3": "done",
+    "exp4": "done",
+    "exp5": "done",
+    "exp6": "not run: fewer than 15 subjects with >= 4 photographs; verification not run",
+    "prepare": "done",
+    "report": "done (11 figures)"
+  },
+  "timings_s": {
+    "align_primary": 0.08657270902767777,
+    "align_secondary": 0.00012979097664356232,
+    "calibration": 0.8366612088866532,
+    "exp1_exp2": 9.865875499788672,
+    "exp3": 46.38168212492019,
+    "exp4": 27.848406958859414,
+    "exp5": 0.8677571248263121,
+    "exp6": 0.002070459071546793,
+    "manifest": 0.6559409997425973,
+    "primary_metrics": 9.577710416633636,
+    "qa": 0.09458379121497273
+  }
+}

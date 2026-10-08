@@ -1,0 +1,278 @@
+[
+  {
+    "face_mask_px": 33234,
+    "fit_residual_px": 0.3397933944399199,
+    "image_id": "synth000",
+    "landmark_meta": {
+      "source": "synthetic"
+    },
+    "rejection_reasons": [],
+    "retained": true,
+    "role": "primary",
+    "valid_px": 29216,
+    "validity": {
+      "cheek_left": 0.9951171875,
+      "cheek_right": 0.9990234375,
+      "eye_inner_left": 1.0,
+      "eye_inner_right": 1.0,
+      "forehead_left": 1.0,
+      "forehead_right": 1.0,
+      "nose_bridge": 1.0,
+      "nose_tip": 1.0
+    },
+    "yaw_proxy": -0.0034806670090116176
+  },
+  {
+    "face_mask_px": 33510,
+    "fit_residual_px": 1.2321240260920936,
+    "image_id": "synth001",
+    "landmark_meta": {
+      "source": "synthetic"
+    },
+    "rejection_reasons": [],
+    "retained": true,
+    "role": "primary",
+    "valid_px": 29457,
+    "validity": {
+      "cheek_left": 0.994140625,
+      "cheek_right": 1.0,
+      "eye_inner_left": 1.0,
+      "eye_inner_right": 1.0,
+      "forehead_left": 1.0,
+      "forehead_right": 1.0,
+      "nose_bridge": 1.0,
+      "nose_tip": 1.0
+    },
+    "yaw_proxy": -0.0636479944562468
+  },
+  {
+    "face_mask_px": 33673,
+    "fit_residual_px": 0.14609747603682008,
+    "image_id": "synth002",
+    "landmark_meta": {
+      "source": "synthetic"
+    },
+    "rejection_reasons": [],
+    "retained": true,
+    "role": "primary",
+    "valid_px": 29593,
+    "validity": {
+      "cheek_left": 0.9765625,
+      "cheek_right": 0.9931640625,
+      "eye_inner_left": 1.0,
+      "eye_inner_right": 1.0,
+      "forehead_left": 1.0,
+      "forehead_right": 1.0,
+      "nose_bridge": 1.0,
+      "nose_tip": 1.0
+    },
+    "yaw_proxy": -0.010015767534570674
+  },
+  {
+    "face_mask_px": 32844,
+    "fit_residual_px": 0.588321677011265,
+    "image_id": "synth003",
+    "landmark_meta": {
+      "source": "synthetic"
+    },
+    "rejection_reasons": [],
+    "retained": true,
+    "role": "primary",
+    "valid_px": 28817,
+    "validity": {
+      "cheek_left": 0.9794921875,
+      "cheek_right": 0.982421875,
+      "eye_inner_left": 1.0,
+      "eye_inner_right": 1.0,
+      "forehead_left": 1.0,
+      "forehead_right": 1.0,
+      "nose_bridge": 1.0,
+      "nose_tip": 1.0
+    },
+    "yaw_proxy": 0.04764520903950786
+  },
+  {
+    "face_mask_px": 33755,
+    "fit_residual_px": 0.1793120245919542,
+    "image_id": "synth004",
+    "landmark_meta": {
+      "source": "synthetic"
+    },
+    "rejection_reasons": [],
+    "retained": true,
+    "role": "primary",
+    "valid_px": 29662,
+    "validity": {
+      "cheek_left": 0.984375,
+      "cheek_right": 0.998046875,
+      "eye_inner_left": 1.0,
+      "eye_inner_right": 1.0,
+      "forehead_left": 1.0,
+      "forehead_right": 1.0,
+      "nose_bridge": 1.0,
+      "nose_tip": 1.0
+    },
+    "yaw_proxy": -0.021049073994263257
+  },
+  {
+    "face_mask_px": 33939,
+    "fit_residual_px": 0.47144197642873514,
+    "image_id": "synth005",
+    "landmark_meta": {
+      "source": "synthetic"
+    },
+    "rejection_reasons": [],
+    "retained": true,
+    "role": "primary",
+    "valid_px": 29907,
+    "validity": {
+      "cheek_left": 0.9931640625,
+      "cheek_right": 1.0,
+      "eye_inner_left": 1.0,
+      "eye_inner_right": 1.0,
+      "forehead_left": 1.0,
+      "forehead_right": 1.0,
+      "nose_bridge": 1.0,
+      "nose_tip": 1.0
+    },
+    "yaw_proxy": -0.07038496994137555
+  },
+  {
+    "face_mask_px": 33822,
+    "fit_residual_px": 0.23834694209094842,
+    "image_id": "synth006",
+    "landmark_meta": {
+      "source": "synthetic"
+    },
+    "rejection_reasons": [],
+    "retained": true,
+    "role": "primary",
+    "valid_px": 29752,
+    "validity": {
+      "cheek_left": 0.9921875,
+      "cheek_right": 0.9921875,
+      "eye_inner_left": 1.0,
+      "eye_inner_right": 1.0,
+      "forehead_left": 1.0,
+      "forehead_right": 1.0,
+      "nose_bridge": 1.0,
+      "nose_tip": 1.0
+    },
+    "yaw_proxy": -0.009430009303648013
+  },
+  {
+    "face_mask_px": 33111,
+    "fit_residual_px": 0.22486788156585347,
+    "image_id": "synth007",
+    "landmark_meta": {
+      "source": "synthetic"
+    },
+    "rejection_reasons": [],
+    "retained": true,
+    "role": "primary",
+    "valid_px": 29099,
+    "validity": {
+      "cheek_left": 0.9970703125,
+      "cheek_right": 0.9912109375,
+      "eye_inner_left": 1.0,
+      "eye_inner_right": 1.0,
+      "forehead_left": 1.0,
+      "forehead_right": 1.0,
+      "nose_bridge": 1.0,
+      "nose_tip": 1.0
+    },
+    "yaw_proxy": 0.01881670673562552
+  },
+  {
+    "face_mask_px": 33818,
+    "fit_residual_px": 0.4298443573575455,
+    "image_id": "synth008",
+    "landmark_meta": {
+      "source": "synthetic"
+    },
+    "rejection_reasons": [],
+    "retained": true,
+    "role": "primary",
+    "valid_px": 29718,
+    "validity": {
+      "cheek_left": 0.9931640625,
+      "cheek_right": 1.0,
+      "eye_inner_left": 1.0,
+      "eye_inner_right": 1.0,
+      "forehead_left": 1.0,
+      "forehead_right": 1.0,
+      "nose_bridge": 1.0,
+      "nose_tip": 1.0
+    },
+    "yaw_proxy": -0.028534506135540094
+  },
+  {
+    "face_mask_px": 33047,
+    "fit_residual_px": 0.6574877522542986,
+    "image_id": "synth009",
+    "landmark_meta": {
+      "source": "synthetic"
+    },
+    "rejection_reasons": [],
+    "retained": true,
+    "role": "primary",
+    "valid_px": 29008,
+    "validity": {
+      "cheek_left": 0.9833984375,
+      "cheek_right": 0.990234375,
+      "eye_inner_left": 1.0,
+      "eye_inner_right": 1.0,
+      "forehead_left": 1.0,
+      "forehead_right": 1.0,
+      "nose_bridge": 1.0,
+      "nose_tip": 1.0
+    },
+    "yaw_proxy": 0.011098047823268287
+  },
+  {
+    "face_mask_px": 33708,
+    "fit_residual_px": 0.5072681039455682,
+    "image_id": "synth010",
+    "landmark_meta": {
+      "source": "synthetic"
+    },
+    "rejection_reasons": [],
+    "retained": true,
+    "role": "primary",
+    "valid_px": 29645,
+    "validity": {
+      "cheek_left": 0.99609375,
+      "cheek_right": 0.9970703125,
+      "eye_inner_left": 1.0,
+      "eye_inner_right": 1.0,
+      "forehead_left": 0.9990234375,
+      "forehead_right": 1.0,
+      "nose_bridge": 1.0,
+      "nose_tip": 1.0
+    },
+    "yaw_proxy": -0.021951861370334114
+  },
+  {
+    "face_mask_px": 33677,
+    "fit_residual_px": 0.2139690961292932,
+    "image_id": "synth011",
+    "landmark_meta": {
+      "source": "synthetic"
+    },
+    "rejection_reasons": [],
+    "retained": true,
+    "role": "primary",
+    "valid_px": 29583,
+    "validity": {
+      "cheek_left": 0.9970703125,
+      "cheek_right": 0.998046875,
+      "eye_inner_left": 1.0,
+      "eye_inner_right": 1.0,
+      "forehead_left": 1.0,
+      "forehead_right": 1.0,
+      "nose_bridge": 1.0,
+      "nose_tip": 1.0
+    },
+    "yaw_proxy": -0.01020145366515357
+  }
+]

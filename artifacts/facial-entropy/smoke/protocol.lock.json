@@ -1,0 +1,196 @@
+{
+  "calibration_sha256": "f5182f5c7227765b468bba99a619803927586284d59f5f934553fd04fde68027",
+  "endpoints": [
+    "binary_cond_otsu",
+    "gaussian_curvature(b16, projected-area sampling)"
+  ],
+  "estimator": "plug-in, base 2, 900 fixed samples per patch, 800 block anchors",
+  "excluded_primary": [],
+  "hash": "720f7d23062481c99e0bf3e966bc670a5c6c6483921bd852cf0f9d3c75f2b821",
+  "patch_rule": "protocol.md \u00a75.4, 32x32, anchor = floor(c+0.5)-16",
+  "primary_image_ids": [
+    "synth000",
+    "synth001",
+    "synth002",
+    "synth003",
+    "synth004",
+    "synth005",
+    "synth006",
+    "synth007",
+    "synth008",
+    "synth009",
+    "synth010",
+    "synth011"
+  ],
+  "profile": {
+    "analysis": {
+      "aligned_size": 256,
+      "binary_thresholds": [
+        0.35,
+        0.5,
+        0.65
+      ],
+      "bins": [
+        8,
+        16,
+        32
+      ],
+      "block_samples_per_patch": 800,
+      "calib_quantile_hi": 0.995,
+      "calib_quantile_lo": 0.005,
+      "calib_samples_per_class": 900,
+      "codebook_sizes": [
+        16,
+        32
+      ],
+      "derivative_stencil_radius": 1,
+      "forehead_extension": 0.8,
+      "height_scale_floor": 1e-06,
+      "jitter_draws": 5,
+      "jitter_sds": [
+        1.0,
+        2.0
+      ],
+      "min_support": 0.9,
+      "patch_size": 32,
+      "policy_area_fractions": [
+        0.1,
+        0.2,
+        0.4
+      ],
+      "policy_random_seeds": 5,
+      "primary_bins": 16,
+      "primary_window": 21,
+      "resolutions": [
+        128,
+        256,
+        512
+      ],
+      "samples_per_patch": 900,
+      "scale_floor": 1e-09,
+      "smooth_sigma": 1.0,
+      "smooth_sigmas": [
+        0.5,
+        1.0,
+        2.0
+      ],
+      "stride": 4,
+      "tile_size": 16,
+      "windows": [
+        11,
+        21,
+        31
+      ]
+    },
+    "calibration_fraction": 0.25,
+    "experiments": [
+      "exp0",
+      "exp1",
+      "exp2",
+      "exp3",
+      "exp4",
+      "exp5",
+      "exp6"
+    ],
+    "extra": {
+      "config_path": "/Users/mykytasiryk/Development/personal-projects/hyperplane-facial-entropy/experiments/facial_entropy/configs/smoke.toml"
+    },
+    "landmark_device": "cpu",
+    "n_subjects": 12,
+    "name": "smoke",
+    "primary_pose": "11",
+    "robustness_subset": 3,
+    "run_resolution_sensitivity": true,
+    "solver": {
+      "albedo_window_radius": 2,
+      "c_z": 1.0,
+      "epsilon": 0.001,
+      "k_ratio": 1.4142135623730951,
+      "n_scales": 4,
+      "neigh_radius": 6,
+      "p_edge": 0.7,
+      "p_flat": 0.3,
+      "pde_alpha": 0.5,
+      "pde_beta": 5.0,
+      "pde_lambda": 1.0,
+      "pde_log_every": 10,
+      "pde_max_iter": 500,
+      "pde_tol": 1e-05,
+      "rayon_threads": 4,
+      "sigma_base": 1.0,
+      "sigma_ref": 4.0,
+      "tensor_window_radius": 2,
+      "trust_mode": "heuristic",
+      "w_b": 0.114,
+      "w_g": 0.587,
+      "w_r": 0.299
+    },
+    "stats": {
+      "alpha": 0.05,
+      "bootstrap": 2000,
+      "permutations": 2000,
+      "verification_bootstrap": 200
+    },
+    "strata_poses": [
+      "12",
+      "13",
+      "14"
+    ],
+    "synthetic_only": true,
+    "verification_poses": [
+      "05",
+      "06",
+      "11",
+      "12",
+      "13",
+      "14"
+    ]
+  },
+  "protocol_version": "1.0",
+  "quantizer": "calibration.json (asinh/log1p, 16 bins, quantiles 0.005/0.995)",
+  "robustness_subset": [
+    "synth000",
+    "synth002",
+    "synth003"
+  ],
+  "seed": 20261008,
+  "solver": {
+    "albedo_window_radius": 2,
+    "c_z": 1.0,
+    "epsilon": 0.001,
+    "k_ratio": 1.4142135623730951,
+    "n_scales": 4,
+    "neigh_radius": 6,
+    "p_edge": 0.7,
+    "p_flat": 0.3,
+    "pde_alpha": 0.5,
+    "pde_beta": 5.0,
+    "pde_lambda": 1.0,
+    "pde_log_every": 10,
+    "pde_max_iter": 500,
+    "pde_tol": 1e-05,
+    "rayon_threads": 4,
+    "sigma_base": 1.0,
+    "sigma_ref": 4.0,
+    "tensor_window_radius": 2,
+    "trust_mode": "heuristic",
+    "w_b": 0.114,
+    "w_g": 0.587,
+    "w_r": 0.299
+  },
+  "source_digest": "871de52f768b2ab6",
+  "subject_split": {
+    "synth000": "test",
+    "synth001": "test",
+    "synth002": "test",
+    "synth003": "test",
+    "synth004": "test",
+    "synth005": "test",
+    "synth006": "test",
+    "synth007": "test",
+    "synth008": "calibration",
+    "synth009": "calibration",
+    "synth010": "calibration",
+    "synth011": "test"
+  }
+}

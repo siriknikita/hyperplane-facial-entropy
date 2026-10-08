@@ -1,0 +1,29 @@
+{
+  "central_patch_union_area_fraction_of_valid": 0.13333333333333333,
+  "features_mask_area_fraction_of_valid": 0.23013863773357443,
+  "frac_max_in_features_mask_BIN": 0.0,
+  "frac_max_in_features_mask_HM": 0.7777777777777778,
+  "frac_max_in_features_mask_KG": 0.7777777777777778,
+  "frac_max_in_features_mask_R": 1.0,
+  "n_subjects": 9,
+  "top_decile_enrichment_BIN": {
+    "mean": 0.7140580243353832,
+    "median": 0.812843797806204,
+    "n": 9
+  },
+  "top_decile_enrichment_HM": {
+    "mean": 2.0378431408404354,
+    "median": 1.970542207493326,
+    "n": 9
+  },
+  "top_decile_enrichment_KG": {
+    "mean": 1.5377310351292457,
+    "median": 1.55110554860242,
+    "n": 9
+  },
+  "top_decile_enrichment_R": {
+    "mean": 2.314974640516504,
+    "median": 2.2786094581897904,
+    "n": 9
+  }
+}
