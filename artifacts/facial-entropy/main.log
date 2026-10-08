@@ -1,0 +1,11 @@
+[forge-entropy] building manifest for 2800 images (FEI)
+[forge-entropy] first 10 primary faces aligned in 0.1s -> projected 12s for all faces
+[forge-entropy] primary: 200/200 faces aligned
+/Users/mykytasiryk/Development/personal-projects/hyperplane-facial-entropy/.venv/lib/python3.12/site-packages/face_alignment/api.py:215: UserWarning: No faces were detected.
+  warnings.warn("No faces were detected.")
+[forge-entropy] secondary: 980/1000 faces aligned
+[forge-entropy] projected surface cache 1.12 GB for 1200 entries (budget 2 GB)
+[forge-entropy] prepare done: 40 calibration faces, s_z=0.1679, lum sigma=3.0
+[forge-entropy] first 10 primary images analysed in 8.4s -> projected 168s
+done: /Users/mykytasiryk/Development/personal-projects/hyperplane-facial-entropy/artifacts/facial-entropy/main/results.md
+exit 0

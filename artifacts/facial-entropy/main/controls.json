@@ -1,0 +1,988 @@
+{
+  "controls": {
+    "nonlocal": {
+      "cheek_left->eye_inner_left": {
+        "KG_entropy_after": 2.259117425223644,
+        "KG_entropy_before": 2.2642103716114184,
+        "max_abs_dz_star_in_unperturbed_patch": 0.0024394989013671875,
+        "rgb_change_in_unperturbed_patch": 0.0
+      },
+      "eye_inner_left->cheek_left": {
+        "KG_entropy_after": 3.416784721600013,
+        "KG_entropy_before": 3.4189634872443517,
+        "max_abs_dz_star_in_unperturbed_patch": 0.003183424472808838,
+        "rgb_change_in_unperturbed_patch": 0.0
+      }
+    },
+    "translation": {
+      "(-40, 0)": {
+        "D_KG": 0.04187388549572146,
+        "D_binary_cond": -0.08351223264222843,
+        "retained": true
+      },
+      "(0, -48)": {
+        "D_KG": 0.6999104556914841,
+        "D_binary_cond": -0.037729733987290855,
+        "retained": true
+      },
+      "(0, 0)": {
+        "D_KG": -0.6116863803966455,
+        "D_binary_cond": -0.006737949651934402,
+        "retained": true
+      },
+      "(0, 48)": {
+        "D_KG": 0.47149164140831834,
+        "D_binary_cond": -0.01070067682229596,
+        "retained": true
+      }
+    }
+  },
+  "runtime_s": 9.356571542099118,
+  "rust": {
+    "backend": "rust-cpu(forge_detect._core.solve_and_extract via CpuBackend)",
+    "converged": true,
+    "iterations": 5,
+    "runtime_two_solves_s": 0.011500416789203882,
+    "threads": "4"
+  },
+  "solver_audit": {
+    "baseline_converged_flag": true,
+    "baseline_iterations": 41,
+    "baseline_stationarity_ratio": 0.34816659868249683,
+    "corrected_variant": {
+      "backend": "torch-lbfgs-replica(float64)",
+      "converged": true,
+      "energy_consistency": 114.93876722060051,
+      "energy_data": 58.835031362505994,
+      "energy_smoothness": 39.71000200621764,
+      "energy_total": 213.48380058932415,
+      "finite": true,
+      "iterations": 44,
+      "params": {
+        "grad_norm_ratio": 4.186692462686244e-06
+      },
+      "runtime_s": 1.1226641670800745,
+      "threads": null,
+      "variant": "corrected_gradient_torch"
+    },
+    "energy_baseline": {
+      "backend": "rust-cpu(forge_detect._core.solve_and_extract via CpuBackend)",
+      "converged": true,
+      "energy_consistency": 185.02210998535156,
+      "energy_data": 16.522098541259766,
+      "energy_smoothness": 93.00733947753906,
+      "energy_total": 294.5515441894531,
+      "finite": true,
+      "iterations": 41,
+      "params": {
+        "albedo_window_radius": 2,
+        "c_z": 1.0,
+        "epsilon": 0.001,
+        "k_ratio": 1.4142135623730951,
+        "n_scales": 4,
+        "neigh_radius": 6,
+        "p_edge": 0.7,
+        "p_flat": 0.3,
+        "pde_alpha": 0.5,
+        "pde_beta": 5.0,
+        "pde_lambda": 1.0,
+        "pde_log_every": 10,
+        "pde_max_iter": 500,
+        "pde_tol": 1e-05,
+        "sigma_base": 1.0,
+        "sigma_ref": 4.0,
+        "tensor_window_radius": 2,
+        "w_b": 0.114,
+        "w_g": 0.587,
+        "w_r": 0.299
+      },
+      "runtime_s": 0.09672004077583551,
+      "threads": "4",
+      "variant": "baseline"
+    },
+    "energy_gradient_divergence_sign": "+beta*div",
+    "implemented_divergence_sign": "-beta*div (paper/code)"
+  },
+  "solver_audit_input": "real calibration face",
+  "summary": {
+    "audit_findings": [
+      "solver.update_direction_matches_energy_gradient",
+      "solver.stationarity_at_z_star",
+      "solver.scharr_vs_central_divergence_adjoint"
+    ],
+    "checks": [
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": {
+          "core_file": "/Users/mykytasiryk/Development/personal-projects/hyperplane-facial-entropy/.venv/lib/python3.12/site-packages/forge_detect/_core.abi3.so",
+          "core_symbols": [
+            "solve_and_extract"
+          ],
+          "forge_detect_file": "/Users/mykytasiryk/Development/personal-projects/hyperplane-facial-entropy/.venv/lib/python3.12/site-packages/forge_detect/__init__.py",
+          "rayon_num_threads_env": "4"
+        },
+        "name": "rust.import",
+        "passed": true,
+        "tolerance": null
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": {
+          "z_star": [
+            48,
+            48
+          ]
+        },
+        "name": "rust.shapes",
+        "passed": true,
+        "tolerance": null
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": null,
+        "name": "rust.finite",
+        "passed": true,
+        "tolerance": null
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": {
+          "max_abs_diff": 0.0,
+          "threads": "4"
+        },
+        "name": "rust.repeat_determinism_48px",
+        "passed": true,
+        "tolerance": 0.001
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": {
+          "bit_exact": true,
+          "iterations": [
+            26,
+            26,
+            26
+          ],
+          "max_abs_diff_over_3_repeats": 0.0,
+          "note": "bit-exact only with RAYON_NUM_THREADS=1; with 4 threads differences up to ~3e-4 in z* and +/-3 iterations were measured on real faces",
+          "threads": "4"
+        },
+        "name": "rust.repeat_determinism_256px",
+        "passed": true,
+        "tolerance": 0.001
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": {
+          "max_abs_diff_z": 0.0
+        },
+        "name": "rust.adapter_vs_direct_core",
+        "passed": true,
+        "tolerance": 1e-06
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": {
+          "max_abs_diff_Iw": 0.037341535091400146
+        },
+        "name": "rust.channel_order_sensitive",
+        "passed": true,
+        "tolerance": null
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": {
+          "params": {
+            "albedo_window_radius": 2,
+            "c_z": 1.0,
+            "epsilon": 0.001,
+            "k_ratio": 1.4142135623730951,
+            "n_scales": 4,
+            "neigh_radius": 6,
+            "p_edge": 0.7,
+            "p_flat": 0.3,
+            "pde_alpha": 0.5,
+            "pde_beta": 5.0,
+            "pde_lambda": 1.0,
+            "pde_log_every": 10,
+            "pde_max_iter": 500,
+            "pde_tol": 1e-05,
+            "sigma_base": 1.0,
+            "sigma_ref": 4.0,
+            "tensor_window_radius": 2,
+            "w_b": 0.114,
+            "w_g": 0.587,
+            "w_r": 0.299
+          }
+        },
+        "name": "rust.param_equality",
+        "passed": true,
+        "tolerance": null
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": {
+          "max_abs_diff": 2.384185791015625e-07
+        },
+        "name": "rust.laplacian_export_matches_replica",
+        "passed": true,
+        "tolerance": 0.0001
+      },
+      {
+        "blocks": "",
+        "category": "audit",
+        "detail": {
+          "energy_total_at_z_star": 294.55224609375,
+          "energy_total_logged": 294.5515441894531,
+          "iterations": 41,
+          "log_every": 10,
+          "note": "exported energy terms belong to the last logged iterate, not necessarily to the returned z*"
+        },
+        "name": "solver.energy_final_is_last_logged_iterate",
+        "passed": true,
+        "tolerance": null
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": {
+          "iterations": [
+            41,
+            43
+          ],
+          "max_abs_diff": 0.00010471045970916748,
+          "note": "differences at the 1e-4 level stem from thread-order-dependent reductions, not from logging"
+        },
+        "name": "solver.log_every_does_not_change_z_star",
+        "passed": true,
+        "tolerance": 0.001
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": {
+          "rel_err": {
+            "consistency": 6.702058891036107e-05,
+            "data": 0.0008191410920694127,
+            "smoothness": 0.0002734411272345894,
+            "total": 1.8497912965643383e-06
+          },
+          "replica": {
+            "consistency": 185.02521158525093,
+            "data": 16.525487993274513,
+            "smoothness": 93.00100165504332,
+            "total": 294.5517012335688
+          },
+          "rust_log_every_1": {
+            "consistency": 185.03761291503906,
+            "data": 16.53903579711914,
+            "smoothness": 92.97557830810547,
+            "total": 294.55224609375
+          }
+        },
+        "name": "solver.replica_energy_matches_rust",
+        "passed": true,
+        "tolerance": 0.001
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": {
+          "autograd": -0.04069395849783282,
+          "fd": -0.040693959135751356
+        },
+        "name": "solver.autograd_matches_finite_difference",
+        "passed": true,
+        "tolerance": 1e-06
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": {
+          "err_vs_minus": 6.732648421345148e-06,
+          "err_vs_plus": 0.35867793042538143,
+          "halvings": 0,
+          "implemented": "-beta*div (paper/code)"
+        },
+        "name": "solver.one_iteration_recovery",
+        "passed": true,
+        "tolerance": 0.001
+      },
+      {
+        "blocks": "interpretation of z* as the energy minimiser",
+        "category": "audit",
+        "detail": {
+          "note": "the implemented operator carries the divergence term with the opposite sign to the energy gradient",
+          "rel_err_minus_vs_half_grad": 0.35269409732108525,
+          "rel_err_plus_vs_half_grad": 0.0484553602208606
+        },
+        "name": "solver.update_direction_matches_energy_gradient",
+        "passed": false,
+        "tolerance": null
+      },
+      {
+        "blocks": "claims that the baseline z* is stationary for E",
+        "category": "audit",
+        "detail": {
+          "converged_flag": true,
+          "energy_trace": [
+            426.647705078125,
+            315.149658203125,
+            297.2248229980469,
+            294.5494689941406,
+            294.5515441894531
+          ],
+          "grad_norm_ratio": 0.34816659868249683,
+          "iterations": 41
+        },
+        "name": "solver.stationarity_at_z_star",
+        "passed": false,
+        "tolerance": 0.01
+      },
+      {
+        "blocks": "treating div as the exact adjoint of the Scharr gradient",
+        "category": "audit",
+        "detail": {
+          "<D_central u,F>": -24.90017460067864,
+          "<Scharr u,F>": -3.995701560537867,
+          "<u,-div F>": -18.700202724023022,
+          "interior_only": {
+            "<D_central u,F>": -11.030734507608251,
+            "<Scharr u,F>": 5.07596864910642,
+            "<u,-div F>": -11.03073450760823
+          }
+        },
+        "name": "solver.scharr_vs_central_divergence_adjoint",
+        "passed": false,
+        "tolerance": 1e-06
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": {
+          "baseline_energy_total": 294.5515441894531,
+          "energy_total": 213.48380058932415,
+          "grad_norm_ratio": 4.186692462686244e-06,
+          "iterations": 44
+        },
+        "name": "solver.corrected_variant_reaches_stationarity",
+        "passed": true,
+        "tolerance": 0.001
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": {
+          "H3": -0.0,
+          "H4": -0.0,
+          "H_cond": 0.0,
+          "H_marginal": 0.0,
+          "n": 3969,
+          "occupancy4": 1,
+          "p": 0.0
+        },
+        "name": "entropy.constant_black.zero",
+        "passed": true,
+        "tolerance": null
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": {
+          "H3": -0.0,
+          "H4": -0.0,
+          "H_cond": 0.0,
+          "H_marginal": 0.0,
+          "n": 3969,
+          "occupancy4": 1,
+          "p": 1.0
+        },
+        "name": "entropy.constant_white.zero",
+        "passed": true,
+        "tolerance": null
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": {
+          "H3": 1.101721649785849,
+          "H4": 1.101721649785849,
+          "H_cond": 0.0,
+          "H_marginal": 1.0,
+          "n": 3969,
+          "occupancy4": 3,
+          "p": 0.5
+        },
+        "name": "entropy.halves.marginal_one_bit_low_conditional",
+        "passed": true,
+        "tolerance": null
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": {
+          "H_marginal": 1.0,
+          "n": 4096,
+          "p": 0.5
+        },
+        "name": "entropy.checkerboard.marginal_one_bit",
+        "passed": true,
+        "tolerance": null
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": {
+          "H3": 0.9999999542087656,
+          "H4": 0.9999999542087656,
+          "H_cond": 0.0,
+          "n": 3969,
+          "occupancy4": 2
+        },
+        "name": "entropy.checkerboard.conditional_zero",
+        "passed": true,
+        "tolerance": null
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": {
+          "H_marginal": 1.0,
+          "n": 4096,
+          "p": 0.5
+        },
+        "name": "entropy.ramp_otsu.balanced",
+        "passed": true,
+        "tolerance": 0.05
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": {
+          "H_marginal": 0.9999559719934967,
+          "n": 4096,
+          "p": 0.50390625
+        },
+        "name": "entropy.noise.marginal_near_one",
+        "passed": true,
+        "tolerance": 0.01
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": {
+          "H3": 2.9989797406095504,
+          "H4": 3.9979965503206376,
+          "H_cond": 0.9990168097110872,
+          "n": 3969,
+          "occupancy4": 16
+        },
+        "name": "entropy.noise.block_near_four",
+        "passed": true,
+        "tolerance": 0.05
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": {
+          "H3": 2.9989797406095504,
+          "H4": 3.9979965503206376,
+          "H_cond": 0.9990168097110872,
+          "n": 3969,
+          "occupancy4": 16
+        },
+        "name": "entropy.noise.conditional_near_one",
+        "passed": true,
+        "tolerance": 0.05
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": null,
+        "name": "entropy.permutation_preserves_marginal",
+        "passed": true,
+        "tolerance": null
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": null,
+        "name": "entropy.permutation_changes_block",
+        "passed": true,
+        "tolerance": null
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": null,
+        "name": "entropy.scalar_sample_permutation_invariant",
+        "passed": true,
+        "tolerance": null
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": null,
+        "name": "entropy.single_valued_descriptor_zero",
+        "passed": true,
+        "tolerance": null
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": null,
+        "name": "entropy.bin_mass_sums_to_one",
+        "passed": true,
+        "tolerance": null
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": null,
+        "name": "entropy.bits_nats_conversion",
+        "passed": true,
+        "tolerance": null
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": null,
+        "name": "entropy.local_map_nan_outside_support",
+        "passed": true,
+        "tolerance": null
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": {
+          "max_abs_diff": 1.7763568394002505e-15
+        },
+        "name": "entropy.local_map_matches_skimage_rank_entropy",
+        "passed": true,
+        "tolerance": 0.001
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": null,
+        "name": "entropy.miller_madow_not_clamped",
+        "passed": true,
+        "tolerance": null
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": {
+          "HM": 0.0,
+          "HM_expected": 0.0,
+          "KG": 0.0,
+          "KG_expected": 0.0
+        },
+        "name": "geometry.plane_constant.n65",
+        "passed": true,
+        "tolerance": null
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": {
+          "HM": -2.1294872264322442e-13,
+          "HM_expected": 0.0,
+          "KG": 0.0,
+          "KG_expected": 0.0
+        },
+        "name": "geometry.plane_tilted.n65",
+        "passed": true,
+        "tolerance": null
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": {
+          "HM": 6.0,
+          "HM_expected": 6.0,
+          "KG": 36.0,
+          "KG_expected": 36.0
+        },
+        "name": "geometry.paraboloid.n65",
+        "passed": true,
+        "tolerance": null
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": {
+          "HM": 0.0,
+          "HM_expected": 0.0,
+          "KG": -36.0,
+          "KG_expected": -36.0
+        },
+        "name": "geometry.saddle.n65",
+        "passed": true,
+        "tolerance": null
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": {
+          "HM": 3.0,
+          "HM_expected": 3.0,
+          "KG": 0.0,
+          "KG_expected": 0.0
+        },
+        "name": "geometry.cylinder.n65",
+        "passed": true,
+        "tolerance": null
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": null,
+        "name": "geometry.cylinder_needs_mean_curvature.n65",
+        "passed": true,
+        "tolerance": null
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": null,
+        "name": "geometry.vertical_translation_invariant.n65",
+        "passed": true,
+        "tolerance": null
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": null,
+        "name": "geometry.vertical_scale_changes_geometry.n65",
+        "passed": true,
+        "tolerance": null
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": {
+          "HM": 0.0,
+          "HM_expected": 0.0,
+          "KG": 0.0,
+          "KG_expected": 0.0
+        },
+        "name": "geometry.plane_constant.n129",
+        "passed": true,
+        "tolerance": null
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": {
+          "HM": 0.0,
+          "HM_expected": 0.0,
+          "KG": 0.0,
+          "KG_expected": 0.0
+        },
+        "name": "geometry.plane_tilted.n129",
+        "passed": true,
+        "tolerance": null
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": {
+          "HM": 6.0,
+          "HM_expected": 6.0,
+          "KG": 36.0,
+          "KG_expected": 36.0
+        },
+        "name": "geometry.paraboloid.n129",
+        "passed": true,
+        "tolerance": null
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": {
+          "HM": 0.0,
+          "HM_expected": 0.0,
+          "KG": -36.0,
+          "KG_expected": -36.0
+        },
+        "name": "geometry.saddle.n129",
+        "passed": true,
+        "tolerance": null
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": {
+          "HM": 3.0,
+          "HM_expected": 3.0,
+          "KG": 0.0,
+          "KG_expected": 0.0
+        },
+        "name": "geometry.cylinder.n129",
+        "passed": true,
+        "tolerance": null
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": null,
+        "name": "geometry.cylinder_needs_mean_curvature.n129",
+        "passed": true,
+        "tolerance": null
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": null,
+        "name": "geometry.vertical_translation_invariant.n129",
+        "passed": true,
+        "tolerance": null
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": null,
+        "name": "geometry.vertical_scale_changes_geometry.n129",
+        "passed": true,
+        "tolerance": null
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": {
+          "HM": 0.0,
+          "HM_expected": 0.0,
+          "KG": 0.0,
+          "KG_expected": 0.0
+        },
+        "name": "geometry.plane_constant.n257",
+        "passed": true,
+        "tolerance": null
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": {
+          "HM": -3.4071795622915785e-12,
+          "HM_expected": 0.0,
+          "KG": 0.0,
+          "KG_expected": 0.0
+        },
+        "name": "geometry.plane_tilted.n257",
+        "passed": true,
+        "tolerance": null
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": {
+          "HM": 6.0,
+          "HM_expected": 6.0,
+          "KG": 36.0,
+          "KG_expected": 36.0
+        },
+        "name": "geometry.paraboloid.n257",
+        "passed": true,
+        "tolerance": null
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": {
+          "HM": 0.0,
+          "HM_expected": 0.0,
+          "KG": -36.0,
+          "KG_expected": -36.0
+        },
+        "name": "geometry.saddle.n257",
+        "passed": true,
+        "tolerance": null
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": {
+          "HM": 3.0,
+          "HM_expected": 3.0,
+          "KG": 0.0,
+          "KG_expected": 0.0
+        },
+        "name": "geometry.cylinder.n257",
+        "passed": true,
+        "tolerance": null
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": null,
+        "name": "geometry.cylinder_needs_mean_curvature.n257",
+        "passed": true,
+        "tolerance": null
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": null,
+        "name": "geometry.vertical_translation_invariant.n257",
+        "passed": true,
+        "tolerance": null
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": null,
+        "name": "geometry.vertical_scale_changes_geometry.n257",
+        "passed": true,
+        "tolerance": null
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": {
+          "max_abs_err_by_n": {
+            "129": 0.07985175021555335,
+            "33": 1.2147861587938138,
+            "65": 0.3144463224668925
+          }
+        },
+        "name": "geometry.refinement_converges",
+        "passed": true,
+        "tolerance": null
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": {
+          "HM": 6.000000000000001,
+          "KG": 36.000000000000014
+        },
+        "name": "geometry.smoothing_preserves_quadratic_curvature",
+        "passed": true,
+        "tolerance": null
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": {
+          "max_abs": 2.842170943040401e-14
+        },
+        "name": "coords.round_trip_subpixel",
+        "passed": true,
+        "tolerance": null
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": {
+          "eye_left": [
+            83.99941256186663,
+            100.01103493162564
+          ],
+          "fit_residual_px": 0.010790892956318214,
+          "mouth": [
+            127.99118324248032,
+            183.9947621283719
+          ]
+        },
+        "name": "coords.targets_hit",
+        "passed": true,
+        "tolerance": null
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": {
+          "expected": [
+            99.0037905340142,
+            100.13920445587658
+          ],
+          "found": [
+            98,
+            99
+          ]
+        },
+        "name": "coords.marker_lands_on_landmark_no_transpose",
+        "passed": true,
+        "tolerance": null
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": {
+          "rms": 3.977347192040446e-14
+        },
+        "name": "coords.similarity_exact_fit",
+        "passed": true,
+        "tolerance": null
+      },
+      {
+        "blocks": "",
+        "category": "integrity",
+        "detail": {
+          "cheek_left->eye_inner_left": {
+            "KG_entropy_after": 2.259117425223644,
+            "KG_entropy_before": 2.2642103716114184,
+            "max_abs_dz_star_in_unperturbed_patch": 0.0024394989013671875,
+            "rgb_change_in_unperturbed_patch": 0.0
+          },
+          "eye_inner_left->cheek_left": {
+            "KG_entropy_after": 3.416784721600013,
+            "KG_entropy_before": 3.4189634872443517,
+            "max_abs_dz_star_in_unperturbed_patch": 0.003183424472808838,
+            "rgb_change_in_unperturbed_patch": 0.0
+          }
+        },
+        "name": "nonlocal.measured",
+        "passed": true,
+        "tolerance": null
+      },
+      {
+        "blocks": "any claim that the ROI layout cannot by itself produce a central advantage",
+        "category": "integrity",
+        "detail": {
+          "(-40, 0)": {
+            "D_KG": 0.04187388549572146,
+            "D_binary_cond": -0.08351223264222843,
+            "retained": true
+          },
+          "(0, -48)": {
+            "D_KG": 0.6999104556914841,
+            "D_binary_cond": -0.037729733987290855,
+            "retained": true
+          },
+          "(0, 0)": {
+            "D_KG": -0.6116863803966455,
+            "D_binary_cond": -0.006737949651934402,
+            "retained": true
+          },
+          "(0, 48)": {
+            "D_KG": 0.47149164140831834,
+            "D_binary_cond": -0.01070067682229596,
+            "retained": true
+          }
+        },
+        "name": "selection.roi_translation_not_forced_central",
+        "passed": true,
+        "tolerance": null
+      }
+    ],
+    "failed": [
+      "solver.update_direction_matches_energy_gradient",
+      "solver.stationarity_at_z_star",
+      "solver.scharr_vs_central_divergence_adjoint"
+    ],
+    "failed_integrity": [],
+    "n_checks": 68,
+    "n_failed": 3
+  }
+}
