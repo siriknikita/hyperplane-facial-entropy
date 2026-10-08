@@ -68,3 +68,12 @@ Per run directory: `run_manifest.json`, `protocol.lock.json`, `dataset_manifest.
 `exclusions.csv`, `calibration.json`, `controls.json`, `image_metrics.csv`, `subject_metrics.csv`,
 `primary_results.json`, `ablation_*.{csv,json}`, `robustness_*.{csv,json}`, `policy_*.{csv,json}`,
 `verification_pairs.csv`, `verification_results.json`, `atlas.npz`, `figures/`, `results.md`.
+
+## Results and history
+
+Each iteration is a tagged release with its journal entry in `EXPERIMENTS.md` and a section in
+`CHANGELOG.md`: `v0.1.0` protocol + implementation, `v0.2.0` synthetic smoke run, `v0.3.0` quick run
+(50 FEI subjects), `v1.0.0` main run (200 subjects). Full readable reports:
+`artifacts/facial-entropy/{smoke,quick,main}/results.md`. Large per-image tables and the surface cache
+are not committed (see `ARCHIVE.md` next to each report); the complete bundles are attached to the
+releases. The FEI photographs themselves are not part of this repository.

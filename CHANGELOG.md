@@ -2,6 +2,14 @@
 
 All notable changes to this project. Format follows Keep a Changelog; newest first.
 
+## [v1.0.0] - 2026-10-08
+### Added
+- Main profile on all 200 FEI subjects (159 test), 50-image robustness subset, verification on 200 identities; complete `results.md`, figures, atlas, results bundle.
+- Source audit updated with thread nondeterminism and energy-logging findings; README documents `--threads 1` for bit-exact reproduction.
+### Findings
+- Binary conditional endpoint: D = +0.050 bits [0.044, 0.057], Holm p = 0.0002. Gaussian-curvature endpoint: D = -0.693 bits [-0.734, -0.652]. No unique Forge contribution (luminance and all solver variants agree). Entropy does not predict identity utility (region rank rho +0.14 / -0.36).
+
+
 ## [v0.3.0] - 2026-10-08
 ### Added
 - Rust/API/data audit (`artifacts/facial-entropy/audit`), quick profile on 50 FEI subjects with all six experiments, results bundle.
